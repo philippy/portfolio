@@ -1,0 +1,806 @@
+<title>Philippy Gonzales, Senior Product Designer</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Philippy Gonzales, Senior Product Designer and UX Strategist. I design AI and data products, from research to a working prototype. Open to consulting and senior roles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: light, airy studio page. Oversized tight display type, pill tags, rounded cards, a monochrome palette, one dark closing band. Single light theme by choice. */
+:root{
+  --bg:#FFFFFF;
+  --soft:#F5F5F3;
+  --line:#E7E7E3;
+  --ink:#121212;
+  --muted:#6E6E6A;
+  --live:#1F9D55;
+  --sans:"Geist","Helvetica Neue",Arial,sans-serif;
+  --mono:"Geist Mono",ui-monospace,Menlo,Consolas,monospace;
+  --r:22px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:light;
+}
+html:not([data-lang="pt"]) body [lang="pt"]{display:none!important}
+html[data-lang="pt"] body [lang="en"]{display:none!important}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+h1,h2,h3,h4,p{margin:0}
+h1,h2,h3{font-weight:400;letter-spacing:-.035em;line-height:1.02;text-wrap:balance}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:500;padding:5px 12px;border:1px solid var(--ink);border-radius:999px;width:max-content}
+.small{font-size:13px;color:var(--muted);line-height:1.5}
+
+/* Buttons */
+.pill{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:10px;font:500 14px var(--sans);padding:10px 18px;border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);text-decoration:none;cursor:pointer;isolation:isolate;transition:color .35s var(--ease)}
+.pill::before{content:"";position:absolute;inset:0;background:var(--ink);transform:translateY(101%);border-radius:inherit;transition:transform .35s var(--ease);z-index:-1}
+.pill:hover{color:var(--bg)}
+.pill:hover::before{transform:translateY(0)}
+.pill.solid{background:var(--ink);color:var(--bg)}
+.pill.solid::before{background:var(--soft)}
+.pill.solid:hover{color:var(--ink)}
+.pill .ar{display:inline-block;transition:transform .35s var(--ease)}
+.pill:hover .ar{transform:translateX(4px)}
+
+/* Header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s}
+.top.scrolled{border-bottom-color:var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:15px;letter-spacing:-.01em}
+.mark{width:28px;height:28px;border-radius:8px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:600 11px var(--mono);transition:transform .5s var(--ease)}
+.brand:hover .mark{transform:rotate(-90deg)}
+.nav{display:flex;gap:28px}
+.nav a{font-size:13px;text-decoration:none;position:relative;padding-block:4px}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--ink);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
+.nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.right{display:flex;align-items:center;gap:10px}
+.lang{position:relative;display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:var(--soft)}
+.lang .knob{position:absolute;top:3px;bottom:3px;left:3px;width:calc(50% - 3px);background:var(--bg);border-radius:999px;box-shadow:0 1px 3px rgba(0,0,0,.12);transition:transform .35s var(--ease)}
+html[data-lang="pt"] .lang .knob{transform:translateX(100%)}
+.lang button{position:relative;z-index:1;font:500 11px var(--mono);letter-spacing:.06em;background:transparent;border:0;padding:5px 11px;cursor:pointer;color:var(--muted)}
+.lang button[aria-pressed="true"]{color:var(--ink)}
+
+/* Hero */
+.hero{padding-block:56px 40px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:32px;align-items:end}
+.hero h1{font-size:clamp(2.6rem,7vw,6.4rem);font-weight:400;letter-spacing:-.055em;line-height:.92}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .line > span{display:inline-block}
+.side{display:flex;flex-direction:column;gap:20px}
+.status{background:var(--soft);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:16px}
+.status .row1{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:500}
+.dot{position:relative;width:9px;height:9px;border-radius:50%;background:var(--live);flex:none}
+.dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--live);animation:ping 2s var(--ease) infinite}
+@keyframes ping{0%{transform:scale(1);opacity:.6}80%,100%{transform:scale(2.6);opacity:0}}
+.langs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.langs li{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--line);opacity:.38;transition:opacity .5s var(--ease)}
+.langs li:first-child{border-top:0}
+.langs li.on{opacity:1}
+.langs .hi{font-size:26px;font-weight:500;letter-spacing:-.03em;line-height:1}
+.langs .nm{font:400 12px var(--mono);color:var(--muted);white-space:nowrap}
+.status .small{font:400 12px var(--mono);color:var(--muted)}
+.intro{font-size:15px;line-height:1.5;text-align:right;max-width:30ch;margin-left:auto}
+.hero-cta{display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap}
+.open{font:400 12px/1.5 var(--mono);color:var(--muted);text-align:right;max-width:34ch;margin:0 0 0 auto}
+
+/* Marquee */
+.marquee{padding-block:28px 8px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.track{display:flex;gap:12px;width:max-content;animation:scroll 38s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.track span{font-size:14px;font-weight:500;padding:10px 22px;border:1px solid var(--line);border-radius:999px;white-space:nowrap;transition:background .25s,border-color .25s}
+.track span:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* Section scaffolding */
+section{padding-block:88px}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,320px);gap:32px;align-items:end;margin-bottom:44px}
+.head > div{display:flex;flex-direction:column;gap:18px}
+.head h2{font-size:clamp(1.9rem,3.6vw,2.7rem);max-width:20ch}
+.head .small{max-width:36ch}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:28px;align-items:stretch}
+.about-card{background:var(--ink);color:var(--bg);border-radius:var(--r);padding:36px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:320px;position:relative;overflow:hidden}
+.about-card p.big{font-size:clamp(1.25rem,2.2vw,1.6rem);line-height:1.35;letter-spacing:-.02em;max-width:34ch}
+.about-card .meta{font:400 12px var(--mono);opacity:.6;letter-spacing:.04em}
+.about-card .ring{position:absolute;right:-90px;top:-90px;width:280px;height:280px;border:1px solid rgba(255,255,255,.18);border-radius:50%;transition:transform 1.2s var(--ease)}
+.about-card .ring.r2{right:-40px;top:-40px;width:180px;height:180px}
+.about-card:hover .ring{transform:scale(1.15)}
+.stats{display:flex;flex-direction:column;justify-content:space-between;gap:20px;padding-block:8px}
+.stat{display:flex;flex-direction:column;gap:6px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.stat:last-child{border-bottom:0;padding-bottom:0}
+.stat .n{font-size:clamp(2.4rem,4.4vw,3.4rem);letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
+.stat .n i{font-style:normal;color:var(--muted);padding-inline:.08em}
+
+/* Services */
+.svc-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:32px}
+.svc-left{display:flex;flex-direction:column;gap:18px}
+.svc-left h2{font-size:clamp(1.9rem,3.6vw,2.7rem);max-width:16ch}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card{position:relative;background:var(--soft);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;gap:12px;min-height:240px;overflow:hidden;transition:background .45s var(--ease),color .45s var(--ease),transform .45s var(--ease)}
+.card::before{content:"";width:36px;height:2px;background:currentColor;opacity:.35}
+.card h3{font-size:20px;letter-spacing:-.025em;line-height:1.15}
+.card p{font-size:13.5px;line-height:1.5;color:var(--muted);transition:color .45s}
+.card .when{font-style:italic}
+.card .go{margin-top:auto;align-self:flex-end;width:38px;height:38px;border-radius:50%;border:1px solid currentColor;display:grid;place-items:center;font-size:16px;transition:transform .45s var(--ease)}
+.card:hover{background:var(--ink);color:var(--bg);transform:translateY(-4px)}
+.card:hover p{color:rgba(255,255,255,.72)}
+.card:hover .go{transform:rotate(-45deg)}
+
+/* Work list (experience-style) */
+.work{background:var(--soft)}
+.list{border-top:1px solid var(--line)}
+.item{position:relative;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr) 44px;gap:24px;align-items:center;padding:26px 0;border-bottom:1px solid var(--line);text-decoration:none;isolation:isolate}
+.item::before{content:"";position:absolute;inset:0 -20px;background:var(--bg);border-radius:14px;transform:scaleY(0);transition:transform .4s var(--ease);z-index:-1}
+.item:hover::before{transform:scaleY(1)}
+.item h3{font-size:18px;font-weight:500;letter-spacing:-.02em}
+.item .small{margin-top:4px;max-width:52ch}
+.item .res{font-size:clamp(1.5rem,2.8vw,2.1rem);letter-spacing:-.035em;text-align:right;font-variant-numeric:tabular-nums}
+.item .res i{font-style:normal;color:var(--muted)}
+.item .go{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:transform .4s var(--ease),background .3s,color .3s,border-color .3s}
+.item:hover .go{background:var(--ink);color:var(--bg);border-color:var(--ink);transform:rotate(-45deg)}
+
+/* Case studies */
+.case{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;padding-block:72px;border-top:1px solid var(--line);scroll-margin-top:80px}
+.case:first-of-type{border-top:0}
+.case .txt{display:flex;flex-direction:column;gap:18px;min-width:0}
+.case h3{font-size:clamp(1.7rem,3.2vw,2.4rem);max-width:20ch}
+.case .meta{display:flex;flex-wrap:wrap;gap:8px}
+.case .meta span{font-size:12px;padding:5px 11px;border-radius:999px;background:var(--soft)}
+.case h4{font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.case p,.case li{font-size:15.5px;line-height:1.62;color:#2B2B29;max-width:60ch}
+.case ol{margin:0;padding-left:1.2em;display:flex;flex-direction:column;gap:10px}
+.case li::marker{font:500 13px var(--mono);color:var(--muted)}
+.case strong{font-weight:600;color:var(--ink)}
+.result{background:var(--soft);border-radius:16px;padding:18px 20px;font-size:16px !important;color:var(--ink) !important}
+.visual{position:sticky;top:96px;align-self:start;min-width:0;display:flex;flex-direction:column;gap:14px}
+.vcard{border-radius:var(--r);background:var(--soft);padding:28px;overflow:hidden;position:relative}
+.vcard.dark{background:var(--ink);color:var(--bg)}
+.vcard .cap{font:400 12px var(--mono);color:var(--muted);margin-top:18px}
+.vcard.shot{padding:14px 14px 22px}
+.bframe{border-radius:12px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 18px 40px -22px rgba(18,18,18,.35)}
+.bframe .bar{display:flex;align-items:center;gap:6px;padding:9px 12px;background:#fff;border-bottom:1px solid var(--line)}
+.bframe .bar i{width:8px;height:8px;border-radius:50%;background:var(--line)}
+.bframe .bar b{margin-left:8px;font:400 11px var(--mono);color:var(--muted)}
+.bframe video{display:block;width:100%;height:auto;background:#f5f8fc}
+.bframe .yt{position:relative;aspect-ratio:16/9;background:#0b0b0b}
+.bframe .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vcard.shot .cap a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.vcard.shot .cap{margin:14px 6px 0}
+.vcard.dark .cap{color:rgba(255,255,255,.55)}
+.bignum{font-size:clamp(3.2rem,7vw,5.6rem);letter-spacing:-.055em;line-height:.95;font-variant-numeric:tabular-nums}
+.bignum i{font-style:normal;opacity:.45;padding-inline:.06em}
+.bignum small{font-size:.35em;letter-spacing:-.02em;opacity:.7;margin-left:.15em}
+
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;list-style:none;margin:0;padding:0}
+.steps li{background:var(--bg);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:4px;transition:transform .35s var(--ease)}
+.steps li:hover{transform:translateY(-3px)}
+.steps li:last-child{background:var(--ink);color:var(--bg)}
+.steps .n{font-size:34px;letter-spacing:-.04em;line-height:1}
+.steps span:last-child{font-size:13px;color:var(--muted);line-height:1.35}
+.steps li:last-child span:last-child{color:rgba(255,255,255,.7)}
+
+.scroll{overflow-x:auto}
+.flow{width:100%;min-width:520px;height:auto;display:block}
+.flow .box{fill:#FFFFFF;stroke:var(--line)}
+.flow .box.hot{fill:var(--ink);stroke:none}
+.flow .t{font:500 12px var(--sans);fill:var(--ink)}
+.flow .t.inv{fill:#FFFFFF}
+.flow .h{font:500 11px var(--mono);letter-spacing:.06em;fill:var(--muted)}
+.flow .ln{stroke:#9C9C97;stroke-width:1.3;fill:none}
+.flow .ln.live{stroke:var(--ink);stroke-dasharray:4 4;animation:dash 1.2s linear infinite}
+.flow .head{fill:#9C9C97}
+@keyframes dash{to{stroke-dashoffset:-16}}
+
+.inputs{display:flex;flex-direction:column;gap:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13px;padding:8px 14px;border-radius:999px;background:var(--bg);border:1px solid var(--line);transition:transform .3s var(--ease),background .3s,color .3s}
+.chip:hover{transform:translateY(-2px);background:var(--ink);color:var(--bg)}
+.down{font:400 18px var(--mono);color:var(--muted);padding-left:6px}
+.node{border-radius:14px;padding:14px 16px;background:var(--bg);border:1px solid var(--line);font-size:14px;font-weight:500}
+.node.dark{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* Approach */
+.approach{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;counter-reset:a}
+.approach li{counter-increment:a;border-top:1px solid var(--ink);padding-top:18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.approach li::before{content:counter(a,decimal-leading-zero);font:500 12px var(--mono);color:var(--muted)}
+.approach h3{font-size:19px;letter-spacing:-.02em;line-height:1.2}
+.approach p{font-size:14px;color:var(--muted)}
+
+/* Quote */
+.quote{text-align:center;padding-block:96px}
+.quote .q{font-size:110px;line-height:.6;color:var(--line);font-weight:600;height:56px;display:block}
+.quote blockquote{margin:0 auto;max-width:44ch;font-size:clamp(1.25rem,2.4vw,1.7rem);letter-spacing:-.02em;line-height:1.4;font-style:italic;font-weight:300}
+.quote .who{text-align:left;line-height:1.35;margin-top:28px;display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:500}
+.quote .who .mark{width:34px;height:34px;border-radius:50%}
+.clients{margin-top:22px;font-size:13px;color:var(--muted);max-width:60ch;margin-inline:auto}
+
+/* Footer */
+.foot{background:var(--ink);color:var(--bg)}
+.foot .wrap{padding-block:80px 32px;display:flex;flex-direction:column;gap:64px}
+.foot-top{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap}
+.foot h2{font-size:clamp(2.8rem,7.5vw,6rem);letter-spacing:-.05em;line-height:.95;max-width:12ch}
+.foot .lede{margin-top:20px;max-width:46ch;color:rgba(255,255,255,.65);font-size:15px}
+.hire{display:inline-flex;align-items:center;gap:12px;padding:8px 20px 8px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.3);color:var(--bg);text-decoration:none;font-size:14px;font-weight:500;transition:background .35s,color .35s}
+.hire .c{width:38px;height:38px;border-radius:50%;background:var(--bg);color:var(--ink);display:grid;place-items:center;transition:transform .45s var(--ease)}
+.hire:hover{background:var(--bg);color:var(--ink)}
+.hire:hover .c{transform:rotate(-45deg);background:var(--ink);color:var(--bg)}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;border-top:1px solid rgba(255,255,255,.15);padding-top:28px}
+.col{display:flex;flex-direction:column;gap:8px;min-width:0}
+.col .k{font:400 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.5)}
+.col .v{font-size:16px;word-break:break-word;user-select:all}
+.col a{color:var(--bg);text-underline-offset:3px}
+.copy{align-self:flex-start;font:500 11px var(--mono);letter-spacing:.05em;text-transform:uppercase;background:transparent;color:var(--bg);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:6px 12px;cursor:pointer;transition:background .25s,color .25s}
+.copy:hover{background:var(--bg);color:var(--ink)}
+.copy.ok{background:var(--live);border-color:var(--live);color:#fff}
+.legal{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:rgba(255,255,255,.45)}
+
+/* Load-in: transform only, text stays readable at every frame */
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+  .hero h1 .line > span{animation:rise .9s var(--ease) both}
+  .hero h1 .line:nth-child(2) > span{animation-delay:.08s}
+  .hero h1 .line:nth-child(3) > span{animation-delay:.16s}
+  @keyframes rise{from{transform:translateY(60%)}to{transform:none}}
+}
+@media (prefers-reduced-motion:reduce){
+  .track,.dot::after,.flow .ln.live{animation:none}
+  *{transition-duration:.01ms !important}
+}
+
+@media (max-width:960px){
+  .hero-grid,.head,.about-grid,.svc-grid,.case{grid-template-columns:minmax(0,1fr)}
+  .intro{text-align:left;margin-left:0}
+  .hero-cta{justify-content:flex-start}
+  .side{max-width:420px}
+  .visual{position:static}
+  .approach{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nav{display:none}
+}
+@media (max-width:620px){
+  section{padding-block:64px}
+  .cards{grid-template-columns:minmax(0,1fr)}
+  .card{min-height:0}
+  .item{grid-template-columns:minmax(0,1fr) 38px;gap:12px}
+  .item .res{grid-column:1;grid-row:2;text-align:left}
+  .item .go{grid-column:2;grid-row:1}
+  .approach,.cols{grid-template-columns:minmax(0,1fr)}
+  .right .pill.hire-top{display:none}
+  .about-card{padding:26px}
+}
+</style>
+
+<header class="top" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mark">PG</span>Philippy Gonzales</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#about"><span lang="en">About</span><span lang="pt">Sobre</span></a>
+      <a href="#services"><span lang="en">Services</span><span lang="pt">Serviços</span></a>
+      <a href="#work"><span lang="en">Work</span><span lang="pt">Trabalhos</span></a>
+      <a href="#approach"><span lang="en">Approach</span><span lang="pt">Método</span></a>
+    </nav>
+    <div class="right">
+      <div class="lang" role="group" aria-label="Language">
+        <span class="knob" aria-hidden="true"></span>
+        <button type="button" id="lang-en" data-set="en" aria-pressed="true">EN</button>
+        <button type="button" id="lang-pt" data-set="pt" aria-pressed="false">PT</button>
+      </div>
+      <a class="pill hire-top" href="#contact"><span lang="en">Hire me</span><span lang="pt">Me contrate</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <h1>
+        <span class="line"><span lang="en">Senior Product</span><span lang="pt">Product Designer</span></span>
+        <span class="line"><span lang="en">Designer &amp;</span><span lang="pt">Sênior e</span></span>
+        <span class="line"><span lang="en">UX Strategist</span><span lang="pt">Estrategista de UX</span></span>
+      </h1>
+      <div class="side">
+        <div class="status">
+          <div class="row1"><span class="dot" aria-hidden="true"></span><span lang="en">Available for consulting</span><span lang="pt">Disponível para consultoria</span></div>
+          <ul class="langs" id="langs">
+            <li class="on"><span class="hi">Hello</span><span class="nm">English</span></li>
+            <li><span class="hi">Hola</span><span class="nm">Español</span></li>
+            <li><span class="hi">Olá</span><span class="nm">Português</span></li>
+          </ul>
+          <div class="small"><span lang="en">I work in three languages</span><span lang="pt">Trabalho em três idiomas</span></div>
+        </div>
+        <p class="intro" lang="en">Hi, I'm Philippy. I design AI and data products, from research to a working prototype.</p>
+        <p class="intro" lang="pt">Oi, sou o Philippy. Eu desenho produtos de IA e dados, da pesquisa ao protótipo funcionando.</p>
+        <div class="hero-cta">
+          <a class="pill solid" href="#work"><span lang="en">See the work</span><span lang="pt">Ver trabalhos</span> <span class="ar">→</span></a>
+        </div>
+        <p class="open"><span lang="en">Senior Product Designer · UX Research Lead · Design Lead · AI Solution Architect</span><span lang="pt">Product Designer Sênior · UX Research Lead · Design Lead · AI Solution Architect</span></p>
+      </div>
+    </div>
+    <div class="marquee" aria-label="Clients">
+      <div class="track">
+        <span>Portos do Paraná</span><span>Polimix</span><span>Tenetic</span><span>EmbraerX</span><span>Embraer</span><span>Equinix</span><span>Ericsson</span><span>Kimberly-Clark</span><span>BearingPoint</span><span>TIM</span><span>Vivo</span><span>Cogna</span><span>Micksgarage</span>
+        <span aria-hidden="true">Portos do Paraná</span><span aria-hidden="true">Polimix</span><span aria-hidden="true">Tenetic</span><span aria-hidden="true">EmbraerX</span><span aria-hidden="true">Embraer</span><span aria-hidden="true">Equinix</span><span aria-hidden="true">Ericsson</span><span aria-hidden="true">Kimberly-Clark</span><span aria-hidden="true">BearingPoint</span><span aria-hidden="true">TIM</span><span aria-hidden="true">Vivo</span><span aria-hidden="true">Cogna</span><span aria-hidden="true">Micksgarage</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="tag"><span lang="en">About me</span><span lang="pt">Sobre mim</span></span>
+          <h2><span lang="en">Developer first, then designer. Today, a bit of both.</span><span lang="pt">Primeiro desenvolvedor, depois designer. Hoje, um pouco dos dois.</span></h2>
+        </div>
+        <p class="small" lang="en">16 years with ports, airlines, industry and media companies, in Brazil, the US and Europe.</p>
+        <p class="small" lang="pt">16 anos com portos, companhias aéreas, indústria e empresas de mídia, no Brasil, nos EUA e na Europa.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card">
+          <span class="ring" aria-hidden="true"></span><span class="ring r2" aria-hidden="true"></span>
+          <p class="big" lang="en">I sit with the people who do the work, map where it breaks, and turn that into products engineering can build. I still write front-end code, so what we test with users is close to what ships.</p>
+          <p class="big" lang="pt">Sento com quem faz o trabalho, mapeio onde ele trava e transformo isso em produtos que a engenharia consegue construir. Ainda escrevo código front-end, então o que testamos com os usuários fica perto do que vai para produção.</p>
+          <p class="meta" lang="en">Lived and worked in Dublin · Research in Austria, the Netherlands, the US and across Brazil</p>
+          <p class="meta" lang="pt">Morei e trabalhei em Dublin · Pesquisas na Áustria, Holanda, EUA e por todo o Brasil</p>
+        </div>
+        <div class="stats">
+          <div class="stat"><span class="n">16+</span><span class="small" lang="en">years designing and building digital products</span><span class="small" lang="pt">anos desenhando e construindo produtos digitais</span></div>
+          <div class="stat"><span class="n">20</span><span class="small" lang="en">departments interviewed in a single port study</span><span class="small" lang="pt">departamentos entrevistados em um único estudo no porto</span></div>
+          <div class="stat"><span class="n">8<i>→</i>2</span><span class="small" lang="en">days to approve a new customer at Polimix</span><span class="small" lang="pt">dias para aprovar um cliente novo na Polimix</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" style="padding-top:24px">
+    <div class="wrap svc-grid">
+      <div class="svc-left">
+        <span class="tag"><span lang="en">Services</span><span lang="pt">Serviços</span></span>
+        <h2><span lang="en">What you can bring me in for</span><span lang="pt">Para o que você pode me chamar</span></h2>
+        <p class="small" lang="en" style="max-width:34ch">Usually a process that's costing time or money, and a team that needs to know what to build before building it.</p>
+        <p class="small" lang="pt" style="max-width:34ch">Normalmente um processo que custa tempo ou dinheiro, e uma equipe que precisa saber o que construir antes de construir.</p>
+        <a class="pill solid" href="#contact" style="width:max-content"><span lang="en">Start a conversation</span><span lang="pt">Começar uma conversa</span> <span class="ar">→</span></a>
+      </div>
+      <div class="cards">
+        <a class="card" href="#contact" style="text-decoration:none">
+          <h3><span lang="en">Field research and discovery</span><span lang="pt">Pesquisa de campo e discovery</span></h3>
+          <p class="when" lang="en">When you need to know how a process really runs before spending money to change it.</p>
+          <p class="when" lang="pt">Quando você precisa saber como um processo funciona antes de investir para mudá-lo.</p>
+          <p lang="en">Interviews across teams, a map of where it hurts, and a short list of what to fix first.</p>
+          <p lang="pt">Entrevistas entre equipes, um mapa de onde dói e uma lista curta do que resolver primeiro.</p>
+          <span class="go" aria-hidden="true">→</span>
+        </a>
+        <a class="card" href="#contact" style="text-decoration:none">
+          <h3><span lang="en">Product and solution architecture</span><span lang="pt">Arquitetura de produto e solução</span></h3>
+          <p class="when" lang="en">When a platform has many kinds of users, older systems to plug into and rules about who sees what.</p>
+          <p class="when" lang="pt">Quando a plataforma tem muitos tipos de usuário, sistemas antigos e regras sobre quem vê o quê.</p>
+          <p lang="en">The domain, the integrations (ERP, SAP, SEI) and the key decisions, mapped so engineering builds the right thing.</p>
+          <p lang="pt">O domínio, as integrações (ERP, SAP, SEI) e as decisões principais, mapeados para a engenharia construir a coisa certa.</p>
+          <span class="go" aria-hidden="true">→</span>
+        </a>
+        <a class="card" href="#contact" style="text-decoration:none">
+          <h3><span lang="en">Internal tools and dashboards</span><span lang="pt">Ferramentas internas e dashboards</span></h3>
+          <p class="when" lang="en">When the ERP has the data but people can't get their work done in it.</p>
+          <p class="when" lang="pt">Quando o ERP tem os dados, mas as pessoas não conseguem trabalhar nele.</p>
+          <p lang="en">Apps, intranets and dashboards shaped around the job, with a design system that keeps them consistent.</p>
+          <p lang="pt">Apps, intranets e dashboards desenhados em volta da tarefa, com um design system que mantém a consistência.</p>
+          <span class="go" aria-hidden="true">→</span>
+        </a>
+        <a class="card" href="#contact" style="text-decoration:none">
+          <h3><span lang="en">AI features people trust</span><span lang="pt">IA em que as pessoas confiam</span></h3>
+          <p class="when" lang="en">When you know AI could help but aren't sure where it belongs.</p>
+          <p class="when" lang="pt">Quando você sabe que a IA pode ajudar, mas não sabe onde ela entra.</p>
+          <p lang="en">Search, recommendations and assistants that fit the workflow and leave the final call with a person.</p>
+          <p lang="pt">Busca, recomendações e assistentes que cabem no fluxo e deixam a decisão final com uma pessoa.</p>
+          <span class="go" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work list -->
+  <section class="work" id="work">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="tag"><span lang="en">Selected work</span><span lang="pt">Trabalhos</span></span>
+          <h2><span lang="en">Four problems, four very different operations</span><span lang="pt">Quatro problemas, quatro operações bem diferentes</span></h2>
+        </div>
+        <p class="small" lang="en">The common thread: research first, then a system people actually use.</p>
+        <p class="small" lang="pt">O que liga todos: pesquisar primeiro, depois construir um sistema que as pessoas usem de fato.</p>
+      </div>
+      <div class="list">
+        <a class="item" href="#e-portos">
+          <div><h3>e-Portos · Portos do Paraná</h3><p class="small" lang="en">Process and protocol platform for the Port of Paranaguá</p><p class="small" lang="pt">Plataforma de processos e protocolo do Porto de Paranaguá</p></div>
+          <span class="res">13 min <i>→</i> <span lang="en">secs</span><span lang="pt">seg</span></span>
+          <span class="go" aria-hidden="true">→</span>
+        </a>
+        <a class="item" href="#polimix">
+          <div><h3>Mizu / Polimix</h3><p class="small" lang="en">Offline field app, approval workflow and management dashboards</p><p class="small" lang="pt">App de campo offline, fluxo de aprovação e dashboards gerenciais</p></div>
+          <span class="res">8 <i>→</i> 2 <span lang="en">days</span><span lang="pt">dias</span></span>
+          <span class="go" aria-hidden="true">→</span>
+        </a>
+        <a class="item" href="#tenetic">
+          <div><h3>Tenetic</h3><p class="small" lang="en">AI platform that builds broadcast media sales pitches from data</p><p class="small" lang="pt">Plataforma com IA que monta propostas de mídia a partir de dados</p></div>
+          <span class="res"><span lang="en">From zero</span><span lang="pt">Do zero</span></span>
+          <span class="go" aria-hidden="true">→</span>
+        </a>
+        <a class="item" href="#beacon">
+          <div><h3>EmbraerX · Beacon</h3><p class="small" lang="en">Unscheduled aircraft maintenance platform, with Work &amp; Co</p><p class="small" lang="pt">Plataforma de manutenção não programada de aeronaves, com a Work &amp; Co</p></div>
+          <span class="res">2019</span>
+          <span class="go" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case studies -->
+  <section style="padding-top:24px">
+    <div class="wrap">
+
+      <article class="case" id="e-portos">
+        <div class="txt">
+          <span class="tag">01 · e-Portos</span>
+          <h3><span lang="en">Finding a process file used to take 13 minutes. Now people just ask for it.</span><span lang="pt">Encontrar um processo levava 13 minutos. Agora a pessoa só pergunta.</span></h3>
+          <div class="meta"><span>Portos do Paraná</span><span lang="en">Public sector</span><span lang="pt">Setor público</span><span lang="en">Research · Architecture · Front-end</span><span lang="pt">Pesquisa · Arquitetura · Front-end</span></div>
+          <p lang="en">Paranaguá is the second-largest port in Brazil. A huge part of its work runs on administrative processes and protocols. The tool staff had for finding them wasn't good enough, so many teams quietly built their own.</p>
+          <p lang="pt">Paranaguá é o segundo maior porto do Brasil. Boa parte do trabalho lá depende de processos administrativos e protocolos. A ferramenta para encontrá-los não dava conta, e muitas equipes acabaram criando as suas por conta própria.</p>
+          <h4><span lang="en">What I did</span><span lang="pt">O que eu fiz</span></h4>
+          <p lang="en">I interviewed 20 departments, one at a time, to see how each team handled processes day to day, where they got stuck and what workarounds they had built. Then I turned it into a heat map of reported pain, to separate what the whole organisation shared from what belonged to one team.</p>
+          <p lang="pt">Entrevistei 20 departamentos, um por um, para entender como cada equipe lidava com processos, onde travava e que soluções improvisadas tinha criado. Depois organizei tudo em um mapa de calor das dores, para separar o que a organização inteira sentia do que era de uma área só.</p>
+          <h4><span lang="en">What people kept telling me</span><span lang="pt">O que as pessoas repetiam</span></h4>
+          <ol lang="en">
+            <li><strong>Nobody could find anything.</strong> Search didn't return the right protocols, so many areas kept parallel spreadsheets just to track what they had sent or received.</li>
+            <li><strong>Signatures stalled.</strong> Documents sat in the signing workflow, deadlines slipped, and the delays cost money.</li>
+            <li><strong>Too much mental effort.</strong> Routine work with documents demanded far more attention than it should.</li>
+          </ol>
+          <ol lang="pt">
+            <li><strong>Ninguém encontrava nada.</strong> A busca não trazia os protocolos certos, e muitas áreas mantinham planilhas paralelas só para acompanhar o que tinham enviado ou recebido.</li>
+            <li><strong>As assinaturas travavam.</strong> Documentos ficavam parados no fluxo de assinatura, prazos escorregavam e o atraso custava dinheiro.</li>
+            <li><strong>Esforço mental demais.</strong> Tarefas rotineiras com documentos exigiam muito mais atenção do que deveriam.</li>
+          </ol>
+          <h4><span lang="en">What changed</span><span lang="pt">O que mudou</span></h4>
+          <p lang="en">We started with search. First we improved the metadata captured when a process is registered. Then we built natural-language search with AI, so staff can find a process from what they actually remember: the client or company, the name of the construction work, the people involved.</p>
+          <p lang="pt">Começamos pela busca. Primeiro melhoramos os metadados coletados no cadastro do processo. Depois implementamos uma busca em linguagem natural com IA, para a pessoa encontrar o processo a partir do que ela lembra: o cliente ou a empresa, o nome da obra, as pessoas envolvidas.</p>
+          <p class="result" lang="en">The shadow spreadsheets stopped being necessary, and so did registering the same process twice.</p>
+          <p class="result" lang="pt">As planilhas paralelas deixaram de ser necessárias, assim como registrar o mesmo processo duas vezes.</p>
+        </div>
+        <div class="visual">
+          <div class="vcard shot">
+            <div class="bframe">
+              <div class="bar"><i></i><i></i><i></i><b>e-portos · prototype</b></div>
+              <video class="autov" muted loop playsinline preload="metadata" poster="media/eportos-poster.jpg" aria-label="e-Portos prototype: natural-language search with AI, then an AI-generated document summary">
+                <source src="media/eportos-ai-search.webm" type="video/webm">
+                <source src="media/eportos-ai-search.mp4" type="video/mp4">
+              </video>
+            </div>
+            <p class="cap" lang="en">The prototype: ask for a process in plain language, get an AI summary of a document. Sample data.</p>
+            <p class="cap" lang="pt">O protótipo: pedir um processo em linguagem natural e gerar um resumo do documento com IA. Dados de exemplo.</p>
+          </div>
+          <div class="vcard dark">
+            <div class="bignum">13<small>min</small> <i>→</i> <span lang="en">secs</span><span lang="pt">seg</span></div>
+            <p class="cap" lang="en">Time to find and register a process, before and after</p>
+            <p class="cap" lang="pt">Tempo para buscar e registrar um processo, antes e depois</p>
+          </div>
+          <div class="vcard">
+            <ol class="steps">
+              <li><span class="n">20</span><span lang="en">departments interviewed</span><span lang="pt">departamentos entrevistados</span></li>
+              <li><span class="n">1</span><span lang="en">heat map of reported pain</span><span lang="pt">mapa de calor das dores</span></li>
+              <li><span class="n">3</span><span lang="en">problems almost everyone had</span><span lang="pt">problemas que quase todos tinham</span></li>
+              <li><span class="n">1</span><span lang="en">tackled first: search</span><span lang="pt">atacado primeiro: a busca</span></li>
+            </ol>
+            <p class="cap" lang="en">From interviews to a single priority</p>
+            <p class="cap" lang="pt">Das entrevistas a uma prioridade</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" id="polimix">
+        <div class="txt">
+          <span class="tag">02 · Mizu / Polimix</span>
+          <h3><span lang="en">Approving a new customer took 8 days. We got it down to 2.</span><span lang="pt">Aprovar um cliente novo levava 8 dias. Baixamos para 2.</span></h3>
+          <div class="meta"><span lang="en">Cement and concrete</span><span lang="pt">Cimento e concreto</span><span lang="en">Sales across Brazil</span><span lang="pt">Vendas no Brasil todo</span><span lang="en">Research · Product · Front-end</span><span lang="pt">Pesquisa · Produto · Front-end</span></div>
+          <p lang="en">Polimix runs on a big ERP. It handles the business well, but people outside IT find it hard to use, and that turns into errors, questions and wasted time every day.</p>
+          <p lang="pt">A Polimix roda em um ERP robusto. Ele dá conta do negócio, mas é difícil para quem não é de TI, e isso vira erro, dúvida e tempo perdido todos os dias.</p>
+          <h4><span lang="en">What I found</span><span lang="pt">O que eu encontrei</span></h4>
+          <p lang="en">I followed one process sales depends on: registering and approving a new customer. A field rep filled in a paper form, photographed it and sent it to admin, who typed it into the ERP. Only then did finance check the credit score, and only after that did legal look for blocks and lawsuits. Every step waited for the one before it.</p>
+          <p lang="pt">Acompanhei um processo do qual o comercial depende: cadastrar e aprovar um cliente novo. O vendedor preenchia uma ficha em papel, tirava foto e mandava para o administrativo, que digitava no ERP. Só então o financeiro avaliava o score, e só depois o jurídico verificava bloqueios e processos judiciais. Cada etapa esperava a anterior.</p>
+          <h4><span lang="en">What I built</span><span lang="pt">O que eu construí</span></h4>
+          <p lang="en">An app for the rep's tablet or phone that works offline, because Polimix sells all over Brazil and reps are often somewhere with no signal. The rep registers the customer on the spot. When the device gets a connection, it uploads, and finance and legal review it at the same time.</p>
+          <p lang="pt">Um app para o tablet ou celular do vendedor que funciona sem internet, porque a Polimix vende para o Brasil inteiro e muitas vezes não há sinal. O cadastro é feito na visita. Quando o aparelho pega conexão, o cadastro sobe e financeiro e jurídico analisam ao mesmo tempo.</p>
+          <p lang="en">I also designed management dashboards that pull from the ERP and the systems around it, with a design system so every panel reads the same way.</p>
+          <p lang="pt">Também criei dashboards gerenciais que puxam dados do ERP e dos sistemas satélites, com um design system para todos os painéis se lerem do mesmo jeito.</p>
+        </div>
+        <div class="visual">
+          <div class="vcard shot">
+            <div class="bframe">
+              <div class="bar"><i></i><i></i><i></i><b>mizu conecta · cadastro de clientes</b></div>
+              <video class="autov" muted loop playsinline preload="metadata" poster="media/polimix-poster.jpg" aria-label="Mizu Conecta: customer registration with a step-by-step progress bar">
+                <source src="media/polimix-registration.webm" type="video/webm">
+                <source src="media/polimix-registration.mp4" type="video/mp4">
+              </video>
+            </div>
+            <p class="cap" lang="en">New customer registration, step by step, with status at each stage. Sample data.</p>
+            <p class="cap" lang="pt">Cadastro de cliente novo, etapa por etapa, com o status de cada uma. Dados de exemplo.</p>
+          </div>
+          <div class="vcard dark">
+            <div class="bignum">8 <i>→</i> 2<small lang="en">days</small><small lang="pt">dias</small></div>
+            <p class="cap" lang="en">Time to approve a new customer</p>
+            <p class="cap" lang="pt">Tempo para aprovar um cliente novo</p>
+          </div>
+          <div class="vcard">
+            <div class="scroll">
+              <svg class="flow" viewBox="0 0 520 300" role="img" aria-labelledby="flow-t">
+                <title id="flow-t">Before: five steps in sequence. After: offline app, sync, then finance and legal in parallel.</title>
+                <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+                <text class="h" x="0" y="14"><tspan lang="en">BEFORE · ONE STEP AT A TIME</tspan><tspan lang="pt">ANTES · UMA ETAPA POR VEZ</tspan></text>
+                <rect class="box" x="0" y="28" width="88" height="44" rx="10"/>
+                <rect class="box" x="108" y="28" width="88" height="44" rx="10"/>
+                <rect class="box" x="216" y="28" width="88" height="44" rx="10"/>
+                <rect class="box" x="324" y="28" width="88" height="44" rx="10"/>
+                <rect class="box" x="432" y="28" width="88" height="44" rx="10"/>
+                <text class="t" x="44" y="54" text-anchor="middle"><tspan lang="en">Paper form</tspan><tspan lang="pt">Ficha papel</tspan></text>
+                <text class="t" x="152" y="54" text-anchor="middle"><tspan lang="en">Photo</tspan><tspan lang="pt">Foto</tspan></text>
+                <text class="t" x="260" y="54" text-anchor="middle"><tspan lang="en">Typed in</tspan><tspan lang="pt">Digitação</tspan></text>
+                <text class="t" x="368" y="54" text-anchor="middle"><tspan lang="en">Finance</tspan><tspan lang="pt">Financeiro</tspan></text>
+                <text class="t" x="476" y="54" text-anchor="middle"><tspan lang="en">Legal</tspan><tspan lang="pt">Jurídico</tspan></text>
+                <path class="ln" d="M88 50 H106" marker-end="url(#ah)"/>
+                <path class="ln" d="M196 50 H214" marker-end="url(#ah)"/>
+                <path class="ln" d="M304 50 H322" marker-end="url(#ah)"/>
+                <path class="ln" d="M412 50 H430" marker-end="url(#ah)"/>
+                <text class="h" x="0" y="132"><tspan lang="en">AFTER · REVIEWS IN PARALLEL</tspan><tspan lang="pt">DEPOIS · ANÁLISES EM PARALELO</tspan></text>
+                <rect class="box hot" x="0" y="190" width="104" height="44" rx="10"/>
+                <rect class="box" x="130" y="190" width="104" height="44" rx="10"/>
+                <rect class="box" x="270" y="152" width="104" height="40" rx="10"/>
+                <rect class="box" x="270" y="232" width="104" height="40" rx="10"/>
+                <rect class="box hot" x="410" y="190" width="110" height="44" rx="10"/>
+                <text class="t inv" x="52" y="216" text-anchor="middle"><tspan lang="en">Offline app</tspan><tspan lang="pt">App offline</tspan></text>
+                <text class="t" x="182" y="216" text-anchor="middle"><tspan lang="en">Syncs</tspan><tspan lang="pt">Sincroniza</tspan></text>
+                <text class="t" x="322" y="176" text-anchor="middle"><tspan lang="en">Finance</tspan><tspan lang="pt">Financeiro</tspan></text>
+                <text class="t" x="322" y="256" text-anchor="middle"><tspan lang="en">Legal</tspan><tspan lang="pt">Jurídico</tspan></text>
+                <text class="t inv" x="465" y="216" text-anchor="middle"><tspan lang="en">Approved</tspan><tspan lang="pt">Aprovado</tspan></text>
+                <path class="ln live" d="M104 212 H128" marker-end="url(#ah)"/>
+                <path class="ln live" d="M234 212 C252 212 252 172 268 172" marker-end="url(#ah)"/>
+                <path class="ln live" d="M234 212 C252 212 252 252 268 252" marker-end="url(#ah)"/>
+                <path class="ln live" d="M374 172 C392 172 392 212 408 212" marker-end="url(#ah)"/>
+                <path class="ln live" d="M374 252 C392 252 392 212 408 212" marker-end="url(#ah)"/>
+              </svg>
+            </div>
+            <p class="cap" lang="en">New customer approval, before and after the field app</p>
+            <p class="cap" lang="pt">Aprovação de cliente novo, antes e depois do app de campo</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" id="tenetic">
+        <div class="txt">
+          <span class="tag">03 · Tenetic</span>
+          <h3><span lang="en">A media sales pitch, built from data almost instantly</span><span lang="pt">Uma proposta de mídia montada a partir dos dados, quase na hora</span></h3>
+          <div class="meta"><span lang="en">New York · Venture-backed</span><span lang="pt">Nova York · Venture capital</span><span lang="en">Broadcast media</span><span lang="pt">Mídia broadcast</span><span lang="en">Product · UX strategy</span><span lang="pt">Produto · Estratégia UX</span></div>
+          <p lang="en">People who sell TV airtime spend a lot of time building presentations. Each one has to justify why a company should buy a slot on channel X instead of Y, on a given day, at a given hour, for a given audience. Tenetic's founders already had the data to answer that. They needed a product that turned it into a pitch.</p>
+          <p lang="pt">Quem vende espaço de mídia na TV gasta muito tempo montando apresentações. Cada uma precisa justificar por que uma empresa deve comprar espaço no canal X e não no Y, em determinado dia, horário e público. Os fundadores da Tenetic já tinham os dados. Faltava um produto que os transformasse em proposta.</p>
+          <h4><span lang="en">What I did</span><span lang="pt">O que eu fiz</span></h4>
+          <p lang="en">I worked out how the platform should work, starting from a blank page. Who uses it, what they need to see first, and where AI fits into a seller's day without taking the decision away from them.</p>
+          <p lang="pt">Defini como a plataforma deveria funcionar, partindo do zero. Quem usa, o que precisa ver primeiro e onde a IA entra no dia do vendedor sem tirar dele a decisão.</p>
+          <p class="result" lang="en">For each prospect, the system uses AI to find the best media investment across audience, program type, time slot and day of the week. The seller starts from a ready recommendation instead of building one by hand.</p>
+          <p class="result" lang="pt">Para cada cliente em potencial, o sistema usa IA para achar o melhor investimento de mídia cruzando público, tipo de programa, horário e dia da semana. O vendedor parte de uma recomendação pronta em vez de montar tudo à mão.</p>
+        </div>
+        <div class="visual">
+          <div class="vcard shot">
+            <div class="bframe">
+              <div class="bar"><i></i><i></i><i></i><b>tenetic · platform</b></div>
+              <video class="autov" muted loop playsinline preload="metadata" poster="media/tenetic-platform-poster.jpg" aria-label="Tenetic platform: choosing filters, AI-ranked options, then a generated pitch presentation">
+                <source src="media/tenetic-platform.webm" type="video/webm">
+                <source src="media/tenetic-platform.mp4" type="video/mp4">
+              </video>
+            </div>
+            <p class="cap" lang="en">The platform: pick the filters, review what the AI ranks, generate the presentation. Sample data.</p>
+            <p class="cap" lang="pt">A plataforma: escolher os filtros, revisar o que a IA ranqueia e gerar a apresentação. Dados de exemplo.</p>
+          </div>
+          <div class="vcard">
+            <div class="inputs">
+              <div class="chips">
+                <span class="chip"><span lang="en">Target audience</span><span lang="pt">Público-alvo</span></span>
+                <span class="chip"><span lang="en">Program type</span><span lang="pt">Tipo de programa</span></span>
+                <span class="chip"><span lang="en">Time slot</span><span lang="pt">Horário</span></span>
+                <span class="chip"><span lang="en">Day of the week</span><span lang="pt">Dia da semana</span></span>
+              </div>
+              <span class="down" aria-hidden="true">↓</span>
+              <span class="node"><span lang="en">AI compares the options</span><span lang="pt">A IA compara as opções</span></span>
+              <span class="down" aria-hidden="true">↓</span>
+              <span class="node dark"><span lang="en">Pitch ready for this prospect</span><span lang="pt">Proposta pronta para este cliente</span></span>
+            </div>
+            <p class="cap" lang="en">What the system crosses for each prospect</p>
+            <p class="cap" lang="pt">O que o sistema cruza para cada cliente</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="case" id="beacon">
+        <div class="txt">
+          <span class="tag">04 · EmbraerX</span>
+          <h3><span lang="en">Getting grounded aircraft back in the air</span><span lang="pt">Fazendo avião parado voltar a voar</span></h3>
+          <div class="meta"><span lang="en">With Work &amp; Co, New York</span><span lang="pt">Com a Work &amp; Co, Nova York</span><span lang="en">18+ months · Launched 2019</span><span lang="pt">18+ meses · Lançado em 2019</span><span>Web · iOS · Android</span></div>
+          <p lang="en">When an aircraft has an unscheduled maintenance problem, every hour on the ground costs money. Beacon connects airline maintenance control, mechanics, the parts supply chain and service providers, so they can coordinate what's needed to return the aircraft to service safely. It works for any fleet, not only Embraer aircraft.</p>
+          <p lang="pt">Quando um avião tem um problema de manutenção não programada, cada hora parado custa dinheiro. O Beacon conecta o controle de manutenção das companhias aéreas, os mecânicos, a cadeia de peças e os prestadores de serviço, para coordenar o que for preciso e devolver a aeronave à operação com segurança. Funciona para qualquer frota, não só Embraer.</p>
+          <h4><span lang="en">What I did</span><span lang="pt">O que eu fiz</span></h4>
+          <p lang="en">I was the link between business and research and the software engineers. I planned and ran the design sprints, built the prototypes, validated them at the end of each sprint and wrote the specs engineering built from, with a team spread across the US, Brazil and Europe.</p>
+          <p lang="pt">Fiz a ponte entre negócio e pesquisa e os engenheiros de software. Planejei e conduzi os design sprints, construí os protótipos, validei ao fim de cada sprint e escrevi as especificações para a engenharia, com um time espalhado entre EUA, Brasil e Europa.</p>
+          <p class="result" lang="en">Maintenance control and mechanics share chat, photos and files in real time. Mechanics pick up new cases as they come in and dispatch technicians from the app.</p>
+          <p class="result" lang="pt">Controle de manutenção e mecânicos trocam mensagens, fotos e arquivos em tempo real. Os mecânicos recebem chamados assim que surgem e despacham técnicos pelo app.</p>
+        </div>
+        <div class="visual">
+          <div class="vcard shot">
+            <div class="bframe">
+              <div class="bar"><i></i><i></i><i></i><b>beacon · design sprint prototype</b></div>
+              <div class="yt"><iframe id="beaconYT" data-vid="eh5gwOHGf3c" title="Design Sprint Prototype Deliverable" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" loading="lazy"></iframe></div>
+            </div>
+            <p class="cap" lang="en">Prototype from the design sprints. <a href="https://www.youtube.com/watch?v=eh5gwOHGf3c" target="_blank" rel="noopener">Watch on YouTube</a></p>
+            <p class="cap" lang="pt">Protótipo dos design sprints. <a href="https://www.youtube.com/watch?v=eh5gwOHGf3c" target="_blank" rel="noopener">Ver no YouTube</a></p>
+          </div>
+          <div class="vcard dark">
+            <div class="bignum">18<small lang="en">months</small><small lang="pt">meses</small></div>
+            <p class="cap" lang="en">From first sprint to launch in July 2019</p>
+            <p class="cap" lang="pt">Do primeiro sprint ao lançamento, em julho de 2019</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Approach -->
+  <section id="approach" style="background:var(--soft)">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <span class="tag"><span lang="en">How I work</span><span lang="pt">Como eu trabalho</span></span>
+          <h2><span lang="en">Same order, every project</span><span lang="pt">A mesma ordem em todo projeto</span></h2>
+        </div>
+      </div>
+      <ol class="approach">
+        <li><h3><span lang="en">Go where the work happens</span><span lang="pt">Ir onde o trabalho acontece</span></h3><p lang="en">Interviews and time with the people who do the job, not only the people who manage it.</p><p lang="pt">Entrevistas e tempo com quem faz o trabalho, não só com quem gerencia.</p></li>
+        <li><h3><span lang="en">Find where it breaks</span><span lang="pt">Achar onde trava</span></h3><p lang="en">Heat maps, flows and the workarounds people built. Those usually point straight at the real problem.</p><p lang="pt">Mapas de calor, fluxos e as gambiarras que as pessoas criaram. Elas costumam apontar direto para o problema real.</p></li>
+        <li><h3><span lang="en">Prototype in code</span><span lang="pt">Prototipar em código</span></h3><p lang="en">Working prototypes tested with real users, so what gets approved is close to what gets built.</p><p lang="pt">Protótipos funcionais testados com usuários reais, para o aprovado ficar perto do construído.</p></li>
+        <li><h3><span lang="en">Hand over something buildable</span><span lang="pt">Entregar algo construível</span></h3><p lang="en">Specs, architecture decisions and acceptance criteria that engineers and AI coding agents can work from.</p><p lang="pt">Especificações, decisões de arquitetura e critérios de aceite para engenheiros e agentes de código com IA.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Principle -->
+  <div class="quote">
+    <div class="wrap">
+      <span class="q" aria-hidden="true">“</span>
+      <blockquote lang="en">Phil truly stands out for his innovative thinking and approach to problem solving. Everything he touches is transformed for the best and for everyone. He is a strategic thinker and excels at understanding the root of challenges prior to creating impactful beautifully designed solutions.</blockquote>
+      <blockquote lang="pt">O Phil se destaca de verdade pelo pensamento inovador e pela forma de resolver problemas. Tudo em que ele toca se transforma para melhor e para todos. É um pensador estratégico e tem um talento especial para entender a raiz dos desafios antes de criar soluções de impacto e lindamente desenhadas.</blockquote>
+      <div class="who"><span class="mark">CR</span><span>Caroline Romedenne<br><small style="font-weight:400;color:var(--muted)"><span lang="en">Vice President, Design · Marlabs US</span><span lang="pt">Vice-presidente de Design · Marlabs US</span></small></span></div>
+    </div>
+  </div>
+</main>
+
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <h2><span lang="en">Let's talk about your process</span><span lang="pt">Vamos falar do seu processo</span></h2>
+        <p class="lede" lang="en">Tell me which process is slowing your team down. I'll reply with an honest first read and whether I'm the right person to help.</p>
+        <p class="lede" lang="pt">Me conte qual processo está travando sua equipe. Eu respondo com uma primeira leitura honesta e se sou a pessoa certa para ajudar.</p>
+      </div>
+      <a class="hire" href="https://www.linkedin.com/in/uxbrazil/" target="_blank" rel="noopener"><span class="c" aria-hidden="true">→</span><span lang="en">Message me on LinkedIn</span><span lang="pt">Falar no LinkedIn</span></a>
+    </div>
+    <div class="cols">
+      <div class="col">
+        <span class="k">E-mail</span>
+        <span class="v">philippy@outlook.com.br</span>
+        <button class="copy" type="button" id="copy-email" data-copy="philippy@outlook.com.br"><span lang="en">Copy</span><span lang="pt">Copiar</span></button>
+      </div>
+      <div class="col">
+        <span class="k">WhatsApp</span>
+        <span class="v">+55 12 98146-6101</span>
+        <button class="copy" type="button" id="copy-phone" data-copy="+5512981466101"><span lang="en">Copy</span><span lang="pt">Copiar</span></button>
+      </div>
+      <div class="col">
+        <span class="k">LinkedIn</span>
+        <span class="v"><a href="https://www.linkedin.com/in/uxbrazil/" target="_blank" rel="noopener">linkedin.com/in/uxbrazil</a></span>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Philippy Gonzales</span>
+      <span lang="en">Designed and coded by me</span><span lang="pt">Desenhado e codificado por mim</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function setLang(l){
+    root.setAttribute('data-lang',l);
+    root.lang = l==='pt' ? 'pt-BR' : 'en';
+    document.querySelectorAll('.lang button').forEach(function(b){
+      b.setAttribute('aria-pressed', b.getAttribute('data-set')===l ? 'true':'false');
+    });
+    try{localStorage.setItem('pg-lang',l)}catch(e){}
+  }
+  var saved=null;
+  try{saved=localStorage.getItem('pg-lang')}catch(e){}
+  if(!saved){ saved=(navigator.language||'').toLowerCase().indexOf('pt')===0?'pt':'en'; }
+  setLang(saved);
+  document.querySelectorAll('.lang button').forEach(function(b){
+    b.addEventListener('click',function(){setLang(b.getAttribute('data-set'))});
+  });
+
+  // Language greeting rotation
+  try{
+    var lis=document.querySelectorAll('#langs li'), k=0;
+    if(lis.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      setInterval(function(){lis[k].classList.remove('on');k=(k+1)%lis.length;lis[k].classList.add('on')},2200);
+    } else {lis.forEach(function(l){l.classList.add('on')})}
+  }catch(e){}
+
+  // Header border on scroll
+  var hdr=document.getElementById('hdr');
+  function onScroll(){hdr.classList.toggle('scrolled',window.scrollY>8)}
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  // Copy buttons
+  document.querySelectorAll('.copy').forEach(function(btn){
+    var original=btn.innerHTML;
+    btn.addEventListener('click',function(){
+      var val=btn.getAttribute('data-copy');
+      var pt=root.getAttribute('data-lang')==='pt';
+      function done(){
+        btn.classList.add('ok'); btn.textContent=pt?'Copiado ✓':'Copied ✓';
+        setTimeout(function(){btn.classList.remove('ok');btn.innerHTML=original},1800);
+      }
+      function fallback(){
+        var el=btn.parentNode.querySelector('.v');
+        var r=document.createRange(); r.selectNodeContents(el);
+        var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      }
+      try{navigator.clipboard.writeText(val).then(done,fallback)}catch(e){fallback()}
+    });
+  });
+
+  // Gentle tilt on dark result cards
+  try{
+    var vids=document.querySelectorAll('video.autov');
+    var calm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var io=(!calm && 'IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){
+      var v=e.target;
+      if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){});}else{v.pause();}
+    });},{threshold:.35}):null;
+    var yt=document.getElementById('beaconYT');
+    if(yt){
+      var vid=yt.getAttribute('data-vid');
+      var load=function(auto){
+        yt.src='https://www.youtube-nocookie.com/embed/'+vid+'?rel=0&modestbranding=1&playsinline=1&loop=1&playlist='+vid+(auto?'&autoplay=1&mute=1':'');
+      };
+      if(calm||!('IntersectionObserver' in window)){load(false);}
+      else{
+        var yo=new IntersectionObserver(function(es){if(es[0].isIntersecting){load(true);yo.disconnect();}},{threshold:.3});
+        yo.observe(yt);
+      }
+    }
+    vids.forEach(function(v){
+      if(calm){v.controls=true;}
+      else if(io){io.observe(v);}
+      else{v.autoplay=true;}
+    });
+  }catch(e){}
+  if(window.matchMedia('(prefers-reduced-motion: no-preference)').matches && window.matchMedia('(hover: hover)').matches){
+    document.querySelectorAll('.vcard.dark').forEach(function(c){
+      c.style.transition='transform .4s cubic-bezier(.2,.7,.2,1)';
+      c.addEventListener('mousemove',function(e){
+        var r=c.getBoundingClientRect();
+        var x=(e.clientX-r.left)/r.width-.5, y=(e.clientY-r.top)/r.height-.5;
+        c.style.transform='perspective(800px) rotateY('+(x*5)+'deg) rotateX('+(-y*5)+'deg)';
+      });
+      c.addEventListener('mouseleave',function(){c.style.transform=''});
+    });
+  }
+})();
+</script>

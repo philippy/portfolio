@@ -205,6 +205,11 @@ section{padding-block:88px}
 .flow .t.inv.sub{fill:rgba(255,255,255,.7)}
 .flow .ping{fill:var(--ink)}
 .flow.col{min-width:0}
+.flow.arch{min-width:0;max-width:420px;margin:0 auto}
+.flow .chipr{fill:var(--soft)}
+.flow .ct{font:500 9.5px var(--sans);fill:var(--ink)}
+.flow .tok{fill:var(--ink);stroke:#FFFFFF;stroke-width:1.5}
+.flow .ln.back{stroke-dasharray:3 3}
 .flow-pair{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .legend{display:flex;align-items:center;gap:8px}
 .pdot{width:7px;height:7px;border-radius:50%;background:var(--ink);flex:none}
@@ -448,7 +453,7 @@ section{padding-block:88px}
         </a>
         <a class="item" href="#beacon">
           <div><h3>EmbraerX · Beacon</h3><p class="small" lang="en">Unscheduled aircraft maintenance platform, with Work &amp; Co</p><p class="small" lang="pt">Plataforma de manutenção não programada de aeronaves, com a Work &amp; Co</p></div>
-          <span class="res"><span lang="en">Next gen airlines</span><span lang="pt">Inovando cias aéreas</span></span>
+          <span class="res">4 <span lang="en">airlines</span><span lang="pt">cias aéreas</span><span class="src"><span lang="en">In production</span><span lang="pt">Em produção</span></span></span>
           <span class="go" aria-hidden="true">→</span>
         </a>
       </div>
@@ -647,20 +652,46 @@ section{padding-block:88px}
             <p class="cap" lang="pt">A plataforma: escolher os filtros, revisar o que a IA ranqueia e gerar a apresentação. Dados de exemplo.</p>
           </div>
           <div class="vcard">
-            <div class="inputs">
-              <div class="chips">
-                <span class="chip"><span lang="en">Target audience</span><span lang="pt">Público-alvo</span></span>
-                <span class="chip"><span lang="en">Program type</span><span lang="pt">Tipo de programa</span></span>
-                <span class="chip"><span lang="en">Time slot</span><span lang="pt">Horário</span></span>
-                <span class="chip"><span lang="en">Day of the week</span><span lang="pt">Dia da semana</span></span>
-              </div>
-              <span class="down" aria-hidden="true">↓</span>
-              <span class="node"><span lang="en">AI compares the options</span><span lang="pt">A IA compara as opções</span></span>
-              <span class="down" aria-hidden="true">↓</span>
-              <span class="node dark"><span lang="en">Pitch ready for this prospect</span><span lang="pt">Proposta pronta para este cliente</span></span>
-            </div>
-            <p class="cap" lang="en">What the system crosses for each prospect</p>
-            <p class="cap" lang="pt">O que o sistema cruza para cada cliente</p>
+            <svg class="flow arch" viewBox="0 0 300 348" role="img" aria-labelledby="arch-t">
+            <title id="arch-t">How the platform works: the seller picks a prospect and four filters; an AI engine crosses them with the broadcast audience and programming data and ranks the options; the seller reviews and can refine; the system generates the pitch for that prospect.</title>
+            <defs><marker id="aht" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+            <text class="h" x="0" y="12" text-anchor="start"><tspan lang="en">HOW THE PLATFORM WORKS</tspan><tspan lang="pt">COMO A PLATAFORMA FUNCIONA</tspan></text>
+            <rect class="box" x="0.5" y="22" width="299" height="72" rx="12"/>
+            <text lang="en" x="14" y="44"><tspan class="t">Seller</tspan><tspan class="t sub"> · picks a prospect</tspan></text><text lang="pt" x="14" y="44"><tspan class="t">Vendedor</tspan><tspan class="t sub"> · escolhe o cliente</tspan></text>
+            <rect class="chipr" x="14" y="58" width="64" height="22" rx="11"/>
+            <text class="ct" x="46" y="73" text-anchor="middle"><tspan lang="en">Audience</tspan><tspan lang="pt">Público</tspan></text>
+            <rect class="chipr" x="84" y="58" width="64" height="22" rx="11"/>
+            <text class="ct" x="116" y="73" text-anchor="middle"><tspan lang="en">Program</tspan><tspan lang="pt">Programa</tspan></text>
+            <rect class="chipr" x="154" y="58" width="64" height="22" rx="11"/>
+            <text class="ct" x="186" y="73" text-anchor="middle"><tspan lang="en">Time slot</tspan><tspan lang="pt">Horário</tspan></text>
+            <rect class="chipr" x="224" y="58" width="64" height="22" rx="11"/>
+            <text class="ct" x="256" y="73" text-anchor="middle"><tspan lang="en">Day</tspan><tspan lang="pt">Dia</tspan></text>
+            <path class="box" d="M0.5 132 a47.5 9 0 0 1 95 0 v58 a47.5 9 0 0 1 -95 0 z"/>
+            <path class="box" d="M0.5 132 a47.5 9 0 0 0 95 0" fill="none"/>
+            <text text-anchor="middle"><tspan class="t" lang="en" x="48" y="164">Broadcast</tspan><tspan class="t" lang="pt" x="48" y="164">Dados de</tspan><tspan class="t" lang="en" x="48" y="178">data</tspan><tspan class="t" lang="pt" x="48" y="178">mídia</tspan></text>
+            <text text-anchor="middle"><tspan class="t sub" lang="en" x="48" y="193">audience, shows</tspan><tspan class="t sub" lang="pt" x="48" y="193">audiência, grade</tspan></text>
+            <rect class="box hot" x="112" y="122" width="188" height="76" rx="12"/>
+            <text class="t inv" x="126" y="152"><tspan lang="en">AI ranking</tspan><tspan lang="pt">Ranqueamento com IA</tspan></text>
+            <text class="t inv sub" x="126" y="170"><tspan lang="en">crosses the 4 filters</tspan><tspan lang="pt">cruza os 4 filtros</tspan></text>
+            <text class="t inv sub" x="126" y="185"><tspan lang="en">with the data, ranks options</tspan><tspan lang="pt">com os dados e ranqueia</tspan></text>
+            <rect class="box" x="0.5" y="226" width="299" height="46" rx="12"/>
+            <text lang="en" x="14" y="254"><tspan class="t">Seller reviews</tspan><tspan class="t sub"> · keeps the final call</tspan></text><text lang="pt" x="14" y="254"><tspan class="t">Vendedor revisa</tspan><tspan class="t sub"> · a decisão é dele</tspan></text>
+            <rect class="box hot" x="0" y="298" width="300" height="46" rx="12"/>
+            <text lang="en" x="14" y="326"><tspan class="t inv">Pitch ready</tspan><tspan class="t inv sub"> · for this prospect</tspan></text><text lang="pt" x="14" y="326"><tspan class="t inv">Proposta pronta</tspan><tspan class="t inv sub"> · para este cliente</tspan></text>
+            <path class="ln live" d="M190 94 V120" marker-end="url(#aht)"/>
+            <path class="ln live" d="M96 160 H110" marker-end="url(#aht)"/>
+            <path class="ln live" d="M170 198 V224" marker-end="url(#aht)"/>
+            <path class="ln back" d="M262 226 V200" marker-end="url(#aht)"/>
+            <text class="h" x="256" y="216" text-anchor="end"><tspan lang="en">refine</tspan><tspan lang="pt">ajusta</tspan></text>
+            <path class="ln live" d="M150 272 V296" marker-end="url(#aht)"/>
+            <text class="h" x="0" y="360" text-anchor="start"><tspan lang="en">Sample flow, not the production architecture.</tspan><tspan lang="pt">Fluxo ilustrativo, não a arquitetura de produção.</tspan></text>
+            <circle class="tok" r="4" opacity="0"><animateMotion dur="4s" begin="0.0s" repeatCount="indefinite" path="M190 96 V118" keyTimes="0;0.2;1" keyPoints="0;1;1" calcMode="linear"/><animate attributeName="opacity" dur="4s" begin="0.0s" repeatCount="indefinite" values="1;1;0;0" keyTimes="0;0.2;0.21;1"/></circle>
+            <circle class="tok" r="3.5" opacity="0"><animateMotion dur="4s" begin="0.0s" repeatCount="indefinite" path="M97 160 H108" keyTimes="0;0.2;1" keyPoints="0;1;1" calcMode="linear"/><animate attributeName="opacity" dur="4s" begin="0.0s" repeatCount="indefinite" values="1;1;0;0" keyTimes="0;0.2;0.21;1"/></circle>
+            <circle class="tok" r="4" opacity="0"><animateMotion dur="4s" begin="-3.0s" repeatCount="indefinite" path="M170 200 V222" keyTimes="0;0.2;1" keyPoints="0;1;1" calcMode="linear"/><animate attributeName="opacity" dur="4s" begin="-3.0s" repeatCount="indefinite" values="1;1;0;0" keyTimes="0;0.2;0.21;1"/></circle>
+            <circle class="tok" r="4" opacity="0"><animateMotion dur="4s" begin="-2.0s" repeatCount="indefinite" path="M150 274 V294" keyTimes="0;0.2;1" keyPoints="0;1;1" calcMode="linear"/><animate attributeName="opacity" dur="4s" begin="-2.0s" repeatCount="indefinite" values="1;1;0;0" keyTimes="0;0.2;0.21;1"/></circle>
+            </svg>
+            <p class="cap" lang="en">From a prospect to a ready pitch, with the seller in control. Illustrative flow.</p>
+            <p class="cap" lang="pt">Do cliente à proposta pronta, com o vendedor no controle. Fluxo ilustrativo.</p>
           </div>
         </div>
       </article>
@@ -677,6 +708,11 @@ section{padding-block:88px}
           <p lang="pt">Fiz a ponte entre negócio e pesquisa e os engenheiros de software. Planejei e conduzi os design sprints, construí os protótipos, validei ao fim de cada sprint e escrevi as especificações para a engenharia, com um time espalhado entre EUA, Brasil e Europa.</p>
           <p class="result" lang="en">Maintenance control and mechanics share chat, photos and files in real time. Mechanics pick up new cases as they come in and dispatch technicians from the app.</p>
           <p class="result" lang="pt">Controle de manutenção e mecânicos trocam mensagens, fotos e arquivos em tempo real. Os mecânicos recebem chamados assim que surgem e despacham técnicos pelo app.</p>
+          <h4><span lang="en">Where it is today</span><span lang="pt">Onde está hoje</span></h4>
+          <p lang="en">Beacon runs in production at four airlines: three in the US and one in Austria.</p>
+          <p lang="pt">O Beacon roda em produção em quatro companhias aéreas: três nos EUA e uma na Áustria.</p>
+          <p lang="en">The platform and app were also built to support the maintenance of the thousands of eVTOLs, electric air taxis, expected to fly over large cities in the coming years.</p>
+          <p lang="pt">A plataforma e o app também foram criados para suportar a manutenção dos milhares de eVTOLs, os táxis aéreos elétricos, que devem voar sobre as grandes cidades nos próximos anos.</p>
         </div>
         <div class="visual">
           <div class="vcard shot">
@@ -688,9 +724,10 @@ section{padding-block:88px}
             <p class="cap" lang="pt">Protótipo dos design sprints. <a href="https://www.youtube.com/watch?v=eh5gwOHGf3c" target="_blank" rel="noopener">Ver no YouTube</a></p>
           </div>
           <div class="vcard dark">
-            <div class="bignum">18<small lang="en">months</small><small lang="pt">meses</small></div>
-            <p class="cap" lang="en">From first sprint to launch in July 2019</p>
-            <p class="cap" lang="pt">Do primeiro sprint ao lançamento, em julho de 2019</p>
+            <div class="bignum">4<small lang="en">airlines</small><small lang="pt">cias aéreas</small></div>
+            <p class="cap" lang="en">Running Beacon today: 3 in the US, 1 in Austria</p>
+            <p class="cap" lang="pt">Usam o Beacon hoje: 3 nos EUA, 1 na Áustria</p>
+            <span class="proof"><span lang="en">In production</span><span lang="pt">Em produção</span></span>
           </div>
         </div>
       </article>
@@ -815,6 +852,7 @@ section{padding-block:88px}
   try{
     var vids=document.querySelectorAll('video.autov');
     var calm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(calm){document.querySelectorAll('svg.arch').forEach(function(x){if(x.pauseAnimations)x.pauseAnimations()});}
     var io=(!calm && 'IntersectionObserver' in window)?new IntersectionObserver(function(es){es.forEach(function(e){
       var v=e.target;
       if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){});}else{v.pause();}

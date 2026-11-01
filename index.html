@@ -201,6 +201,14 @@ section{padding-block:88px}
 .flow .ln{stroke:#9C9C97;stroke-width:1.3;fill:none}
 .flow .ln.live{stroke:var(--ink);stroke-dasharray:4 4;animation:dash 1.2s linear infinite}
 .flow .head{fill:#9C9C97}
+.flow .t.sub{font-size:11px;fill:var(--muted)}
+.flow .t.inv.sub{fill:rgba(255,255,255,.7)}
+.flow .ping{fill:var(--ink)}
+.flow.col{min-width:0}
+.flow-pair{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.legend{display:flex;align-items:center;gap:8px}
+.pdot{width:7px;height:7px;border-radius:50%;background:var(--ink);flex:none}
+@media (max-width:560px){.flow-pair{grid-template-columns:1fr;gap:28px}}
 @keyframes dash{to{stroke-dashoffset:-16}}
 
 .inputs{display:flex;flex-direction:column;gap:14px}
@@ -330,8 +338,8 @@ section{padding-block:88px}
     </div>
     <div class="marquee" aria-label="Clients">
       <div class="track">
-        <span>Portos do Paraná</span><span>Polimix</span><span>Tenetic</span><span>EmbraerX</span><span>Embraer</span><span>Equinix</span><span>Ericsson</span><span>Kimberly-Clark</span><span>BearingPoint</span><span>TIM</span><span>Vivo</span><span>Cogna</span><span>Micksgarage</span>
-        <span aria-hidden="true">Portos do Paraná</span><span aria-hidden="true">Polimix</span><span aria-hidden="true">Tenetic</span><span aria-hidden="true">EmbraerX</span><span aria-hidden="true">Embraer</span><span aria-hidden="true">Equinix</span><span aria-hidden="true">Ericsson</span><span aria-hidden="true">Kimberly-Clark</span><span aria-hidden="true">BearingPoint</span><span aria-hidden="true">TIM</span><span aria-hidden="true">Vivo</span><span aria-hidden="true">Cogna</span><span aria-hidden="true">Micksgarage</span>
+        <span>Portos do Paraná</span><span>Mizu / Polimix</span><span>Tenetic</span><span>EmbraerX</span><span>Embraer</span><span>Equinix</span><span>Ericsson</span><span>Kimberly-Clark</span><span>BearingPoint</span><span>TIM</span><span>Vivo</span><span>Cogna</span><span>Micksgarage</span>
+        <span aria-hidden="true">Portos do Paraná</span><span aria-hidden="true">Mizu / Polimix</span><span aria-hidden="true">Tenetic</span><span aria-hidden="true">EmbraerX</span><span aria-hidden="true">Embraer</span><span aria-hidden="true">Equinix</span><span aria-hidden="true">Ericsson</span><span aria-hidden="true">Kimberly-Clark</span><span aria-hidden="true">BearingPoint</span><span aria-hidden="true">TIM</span><span aria-hidden="true">Vivo</span><span aria-hidden="true">Cogna</span><span aria-hidden="true">Micksgarage</span>
       </div>
     </div>
   </div>
@@ -358,7 +366,7 @@ section{padding-block:88px}
         <div class="stats">
           <div class="stat"><span class="n">16+</span><span class="small" lang="en">years designing and building digital products</span><span class="small" lang="pt">anos desenhando e construindo produtos digitais</span></div>
           <div class="stat"><span class="n">20</span><span class="small" lang="en">departments interviewed in a single port study</span><span class="small" lang="pt">departamentos entrevistados em um único estudo no porto</span></div>
-          <div class="stat"><span class="n">8<i>→</i>2</span><span class="small" lang="en">days to approve a new customer at Polimix, in production</span><span class="small" lang="pt">dias para aprovar um cliente novo na Polimix, em produção</span></div>
+          <div class="stat"><span class="n">8<i>→</i>2</span><span class="small" lang="en">days to approve a new customer at Mizu / Polimix, in production</span><span class="small" lang="pt">dias para aprovar um cliente novo na Mizu / Polimix, em produção</span></div>
         </div>
       </div>
     </div>
@@ -395,8 +403,8 @@ section{padding-block:88px}
           <h3><span lang="en">Internal tools and dashboards</span><span lang="pt">Ferramentas internas e dashboards</span></h3>
           <p lang="en">Apps, intranets and dashboards shaped around the job, with a design system that keeps them consistent.</p>
           <p lang="pt">Apps, intranets e dashboards desenhados em volta da tarefa, com um design system que mantém a consistência.</p>
-          <p class="when" lang="en">Polimix: customer approval from 8 days to 2, in production.</p>
-          <p class="when" lang="pt">Polimix: aprovação de cliente de 8 para 2 dias, em produção.</p>
+          <p class="when" lang="en">Mizu / Polimix: customer approval from 8 days to 2, in production.</p>
+          <p class="when" lang="pt">Mizu / Polimix: aprovação de cliente de 8 para 2 dias, em produção.</p>
           <span class="go" aria-hidden="true">→</span>
         </a>
         <a class="card" href="#tenetic" style="text-decoration:none">
@@ -454,20 +462,30 @@ section{padding-block:88px}
       <article class="case" id="polimix">
         <div class="txt">
           <span class="tag">01 · Mizu / Polimix</span>
-          <h3><span lang="en">Approving a new customer took 8 days. We got it down to 2.</span><span lang="pt">Aprovar um cliente novo levava 8 dias. Baixamos para 2.</span></h3>
+          <h3><span lang="en">Approving a new customer took 8 days. Now it takes 2.</span><span lang="pt">Aprovar um cliente novo levava 8 dias. Agora leva 2.</span></h3>
           <div class="meta"><span lang="en">Cement and concrete</span><span lang="pt">Cimento e concreto</span><span lang="en">Sales across Brazil</span><span lang="pt">Vendas no Brasil todo</span><span lang="en">Research · Product · Front-end</span><span lang="pt">Pesquisa · Produto · Front-end</span></div>
-          <p lang="en">Polimix runs on a big ERP. It handles the business well, but people outside IT find it hard to use, and that turns into errors, questions and wasted time every day.</p>
-          <p lang="pt">A Polimix roda em um ERP robusto. Ele dá conta do negócio, mas é difícil para quem não é de TI, e isso vira erro, dúvida e tempo perdido todos os dias.</p>
+          <p lang="en">Mizu / Polimix sells cement and concrete all over Brazil. Before a rep could sell to a new customer, four teams had to sign off, one after the other. That took 8 days, and the sale waited the whole time.</p>
+          <p lang="pt">A Mizu / Polimix vende cimento e concreto para o Brasil inteiro. Antes de o vendedor fechar com um cliente novo, quatro equipes precisavam aprovar, uma depois da outra. Isso levava 8 dias, e a venda esperava o tempo todo.</p>
           <h4><span lang="en">What I found</span><span lang="pt">O que eu encontrei</span></h4>
-          <p lang="en">I followed one process sales depends on: registering and approving a new customer. A field rep filled in a paper form, photographed it and sent it to admin, who typed it into the ERP. Only then did finance check the credit score, and only after that did legal look for blocks and lawsuits. Every step waited for the one before it.</p>
-          <p lang="pt">Acompanhei um processo do qual o comercial depende: cadastrar e aprovar um cliente novo. O vendedor preenchia uma ficha em papel, tirava foto e mandava para o administrativo, que digitava no ERP. Só então o financeiro avaliava o score, e só depois o jurídico verificava bloqueios e processos judiciais. Cada etapa esperava a anterior.</p>
-          <h4><span lang="en">What I built</span><span lang="pt">O que eu construí</span></h4>
-          <p lang="en">An app for the rep's tablet or phone that works offline, because Polimix sells all over Brazil and reps are often somewhere with no signal. The rep registers the customer on the spot. When the device gets a connection, it uploads, and finance and legal review it at the same time.</p>
-          <p lang="pt">Um app para o tablet ou celular do vendedor que funciona sem internet, porque a Polimix vende para o Brasil inteiro e muitas vezes não há sinal. O cadastro é feito na visita. Quando o aparelho pega conexão, o cadastro sobe e financeiro e jurídico analisam ao mesmo tempo.</p>
+          <p lang="en">I followed the process end to end. The rep filled in a paper form and sent a photo. Admin typed it into the ERP, reviewed the data and approved it once it was complete. Then finance checked the credit score, legal looked for blocks and lawsuits, and sales chose the service hubs that set the customer's price list.</p>
+          <p lang="pt">Acompanhei o processo de ponta a ponta. O vendedor preenchia uma ficha em papel e mandava uma foto. O administrativo digitava no ERP, revisava os dados e aprovava quando o cadastro estava completo. Depois, o financeiro avaliava o score, o jurídico verificava bloqueios e processos, e o comercial definia os polos de atendimento, que determinam a lista de preços do cliente.</p>
+          <p lang="en">Each team waited for the one before it, and every handoff added time.</p>
+          <p lang="pt">Cada equipe esperava a anterior, e cada passagem de bastão somava tempo.</p>
+          <h4><span lang="en">What I changed</span><span lang="pt">O que eu mudei</span></h4>
+          <ol lang="en">
+            <li><strong>The work happens in the form.</strong> The rep registers the customer in an app on a phone or tablet, offline when there's no signal. Admin reviews and approves in that same record, so nothing is retyped.</li>
+            <li><strong>Checks run in parallel.</strong> Finance and legal review at the same time instead of one after the other.</li>
+            <li><strong>Every step notifies the next.</strong> As soon as a step is done, the next team is alerted, so nobody has to check whether it's their turn.</li>
+          </ol>
+          <ol lang="pt">
+            <li><strong>O trabalho acontece no formulário.</strong> O vendedor cadastra o cliente no app, no celular ou tablet, mesmo sem sinal. O administrativo revisa e aprova no mesmo registro, sem redigitar nada.</li>
+            <li><strong>Análises em paralelo.</strong> Financeiro e jurídico avaliam ao mesmo tempo, não um depois do outro.</li>
+            <li><strong>Cada etapa avisa a próxima.</strong> Assim que uma etapa termina, a equipe seguinte é notificada, sem precisar conferir se chegou a vez dela.</li>
+          </ol>
           <p lang="en">I also designed management dashboards that pull from the ERP and the systems around it, with a design system so every panel reads the same way.</p>
           <p lang="pt">Também criei dashboards gerenciais que puxam dados do ERP e dos sistemas satélites, com um design system para todos os painéis se lerem do mesmo jeito.</p>
-          <p class="result" lang="en">In production, approving a new customer dropped from 8 days to 2, because finance and legal no longer wait for each other.</p>
-          <p class="result" lang="pt">Em produção, aprovar um cliente novo caiu de 8 para 2 dias, porque financeiro e jurídico deixaram de esperar um pelo outro.</p>
+          <p class="result" lang="en">In production, approving a new customer dropped from 8 days to&nbsp;2.</p>
+          <p class="result" lang="pt">Em produção, aprovar um cliente novo caiu de 8 para 2 dias.</p>
         </div>
         <div class="visual">
           <div class="vcard shot">
@@ -488,45 +506,60 @@ section{padding-block:88px}
             <span class="proof"><span lang="en">Measured in production</span><span lang="pt">Medido em produção</span></span>
           </div>
           <div class="vcard">
-            <div class="scroll">
-              <svg class="flow" viewBox="0 0 520 300" role="img" aria-labelledby="flow-t">
-                <title id="flow-t">Before: five steps in sequence. After: offline app, sync, then finance and legal in parallel.</title>
-                <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker></defs>
-                <text class="h" x="0" y="14"><tspan lang="en">BEFORE · ONE STEP AT A TIME</tspan><tspan lang="pt">ANTES · UMA ETAPA POR VEZ</tspan></text>
-                <rect class="box" x="0" y="28" width="88" height="44" rx="10"/>
-                <rect class="box" x="108" y="28" width="88" height="44" rx="10"/>
-                <rect class="box" x="216" y="28" width="88" height="44" rx="10"/>
-                <rect class="box" x="324" y="28" width="88" height="44" rx="10"/>
-                <rect class="box" x="432" y="28" width="88" height="44" rx="10"/>
-                <text class="t" x="44" y="54" text-anchor="middle"><tspan lang="en">Paper form</tspan><tspan lang="pt">Ficha papel</tspan></text>
-                <text class="t" x="152" y="54" text-anchor="middle"><tspan lang="en">Photo</tspan><tspan lang="pt">Foto</tspan></text>
-                <text class="t" x="260" y="54" text-anchor="middle"><tspan lang="en">Typed in</tspan><tspan lang="pt">Digitação</tspan></text>
-                <text class="t" x="368" y="54" text-anchor="middle"><tspan lang="en">Finance</tspan><tspan lang="pt">Financeiro</tspan></text>
-                <text class="t" x="476" y="54" text-anchor="middle"><tspan lang="en">Legal</tspan><tspan lang="pt">Jurídico</tspan></text>
-                <path class="ln" d="M88 50 H106" marker-end="url(#ah)"/>
-                <path class="ln" d="M196 50 H214" marker-end="url(#ah)"/>
-                <path class="ln" d="M304 50 H322" marker-end="url(#ah)"/>
-                <path class="ln" d="M412 50 H430" marker-end="url(#ah)"/>
-                <text class="h" x="0" y="132"><tspan lang="en">AFTER · REVIEWS IN PARALLEL</tspan><tspan lang="pt">DEPOIS · ANÁLISES EM PARALELO</tspan></text>
-                <rect class="box hot" x="0" y="190" width="104" height="44" rx="10"/>
-                <rect class="box" x="130" y="190" width="104" height="44" rx="10"/>
-                <rect class="box" x="270" y="152" width="104" height="40" rx="10"/>
-                <rect class="box" x="270" y="232" width="104" height="40" rx="10"/>
-                <rect class="box hot" x="410" y="190" width="110" height="44" rx="10"/>
-                <text class="t inv" x="52" y="216" text-anchor="middle"><tspan lang="en">Offline app</tspan><tspan lang="pt">App offline</tspan></text>
-                <text class="t" x="182" y="216" text-anchor="middle"><tspan lang="en">Syncs</tspan><tspan lang="pt">Sincroniza</tspan></text>
-                <text class="t" x="322" y="176" text-anchor="middle"><tspan lang="en">Finance</tspan><tspan lang="pt">Financeiro</tspan></text>
-                <text class="t" x="322" y="256" text-anchor="middle"><tspan lang="en">Legal</tspan><tspan lang="pt">Jurídico</tspan></text>
-                <text class="t inv" x="465" y="216" text-anchor="middle"><tspan lang="en">Approved</tspan><tspan lang="pt">Aprovado</tspan></text>
-                <path class="ln live" d="M104 212 H128" marker-end="url(#ah)"/>
-                <path class="ln live" d="M234 212 C252 212 252 172 268 172" marker-end="url(#ah)"/>
-                <path class="ln live" d="M234 212 C252 212 252 252 268 252" marker-end="url(#ah)"/>
-                <path class="ln live" d="M374 172 C392 172 392 212 408 212" marker-end="url(#ah)"/>
-                <path class="ln live" d="M374 252 C392 252 392 212 408 212" marker-end="url(#ah)"/>
-              </svg>
-            </div>
-            <p class="cap" lang="en">New customer approval, before and after the field app</p>
-            <p class="cap" lang="pt">Aprovação de cliente novo, antes e depois do app de campo</p>
+            <div class="flow-pair">
+                <svg class="flow col" viewBox="0 0 250 352" role="img" aria-labelledby="flow-b">
+                <title id="flow-b">Before: paper form and photo, typed into the ERP, then admin, finance, legal and sales, one after the other, about 8 days.</title>
+                <defs><marker id="ahb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+                <text class="h" x="0" y="14"><tspan lang="en">BEFORE · ONE AT A TIME · 8 DAYS</tspan><tspan lang="pt">ANTES · UM POR VEZ · 8 DIAS</tspan></text>
+                <rect class="box" x="0.5" y="30" width="249" height="40" rx="10"/>
+                <text lang="en" x="14" y="54"><tspan class="t">Paper form + photo</tspan></text><text lang="pt" x="14" y="54"><tspan class="t">Ficha em papel + foto</tspan></text>
+                <path class="ln" d="M125 70 V84" marker-end="url(#ahb)"/>
+                <rect class="box" x="0.5" y="86" width="249" height="40" rx="10"/>
+                <text lang="en" x="14" y="110"><tspan class="t">Typed into the ERP</tspan></text><text lang="pt" x="14" y="110"><tspan class="t">Digitada no ERP</tspan></text>
+                <path class="ln" d="M125 126 V140" marker-end="url(#ahb)"/>
+                <rect class="box" x="0.5" y="142" width="249" height="40" rx="10"/>
+                <text lang="en" x="14" y="166"><tspan class="t">Admin</tspan><tspan class="t sub"> · reviews, approves</tspan></text><text lang="pt" x="14" y="166"><tspan class="t">Administrativo</tspan><tspan class="t sub"> · revisa e aprova</tspan></text>
+                <path class="ln" d="M125 182 V196" marker-end="url(#ahb)"/>
+                <rect class="box" x="0.5" y="198" width="249" height="40" rx="10"/>
+                <text lang="en" x="14" y="222"><tspan class="t">Finance</tspan><tspan class="t sub"> · credit score</tspan></text><text lang="pt" x="14" y="222"><tspan class="t">Financeiro</tspan><tspan class="t sub"> · score</tspan></text>
+                <path class="ln" d="M125 238 V252" marker-end="url(#ahb)"/>
+                <rect class="box" x="0.5" y="254" width="249" height="40" rx="10"/>
+                <text lang="en" x="14" y="278"><tspan class="t">Legal</tspan><tspan class="t sub"> · blocks, lawsuits</tspan></text><text lang="pt" x="14" y="278"><tspan class="t">Jurídico</tspan><tspan class="t sub"> · bloqueios</tspan></text>
+                <path class="ln" d="M125 294 V308" marker-end="url(#ahb)"/>
+                <rect class="box" x="0.5" y="310" width="249" height="40" rx="10"/>
+                <text lang="en" x="14" y="334"><tspan class="t">Sales</tspan><tspan class="t sub"> · service hubs</tspan></text><text lang="pt" x="14" y="334"><tspan class="t">Comercial</tspan><tspan class="t sub"> · define polos</tspan></text>
+                </svg>
+                <svg class="flow col" viewBox="0 0 250 352" role="img" aria-labelledby="flow-a">
+                <title id="flow-a">After: the rep fills the form in an offline app, admin reviews in the same record, finance and legal review in parallel, sales picks the service hubs, and each step notifies the next, about 2 days.</title>
+                <defs><marker id="aha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+                <text class="h" x="0" y="14"><tspan lang="en">AFTER · 2 DAYS</tspan><tspan lang="pt">DEPOIS · 2 DIAS</tspan></text>
+                <rect class="box hot" x="0" y="30" width="250" height="40" rx="10"/>
+                <text lang="en" x="14" y="54"><tspan class="t inv">Form in the app</tspan><tspan class="t inv sub"> · offline</tspan></text><text lang="pt" x="14" y="54"><tspan class="t inv">Formulário no app</tspan><tspan class="t inv sub"> · offline</tspan></text>
+                <rect class="box" x="0.5" y="94" width="249" height="40" rx="10"/>
+                <text lang="en" x="14" y="118"><tspan class="t">Admin</tspan><tspan class="t sub"> · reviews in the form</tspan></text><text lang="pt" x="14" y="118"><tspan class="t">Administrativo</tspan><tspan class="t sub"> · revisa no form</tspan></text>
+                <rect class="box" x="0.5" y="160" width="119" height="46" rx="10"/>
+                <text lang="en" text-anchor="middle"><tspan class="t" x="60" y="180">Finance</tspan><tspan class="t sub" x="60" y="195">credit score</tspan></text><text lang="pt" text-anchor="middle"><tspan class="t" x="60" y="180">Financeiro</tspan><tspan class="t sub" x="60" y="195">score</tspan></text>
+                <rect class="box" x="130.5" y="160" width="119" height="46" rx="10"/>
+                <text lang="en" text-anchor="middle"><tspan class="t" x="190" y="180">Legal</tspan><tspan class="t sub" x="190" y="195">blocks, lawsuits</tspan></text><text lang="pt" text-anchor="middle"><tspan class="t" x="190" y="180">Jurídico</tspan><tspan class="t sub" x="190" y="195">bloqueios</tspan></text>
+                <rect class="box" x="0.5" y="232" width="249" height="40" rx="10"/>
+                <text lang="en" x="14" y="256"><tspan class="t">Sales</tspan><tspan class="t sub"> · picks service hubs</tspan></text><text lang="pt" x="14" y="256"><tspan class="t">Comercial</tspan><tspan class="t sub"> · define polos</tspan></text>
+                <rect class="box hot" x="0" y="296" width="250" height="40" rx="10"/>
+                <text lang="en" x="14" y="320"><tspan class="t inv">Approved</tspan><tspan class="t inv sub"> · price list set</tspan></text><text lang="pt" x="14" y="320"><tspan class="t inv">Aprovado</tspan><tspan class="t inv sub"> · lista de preços definida</tspan></text>
+                <path class="ln live" d="M125 70 V92" marker-end="url(#aha)"/>
+                <path class="ln live" d="M125 134 V140 C125 150 60 146 60 158" marker-end="url(#aha)"/>
+                <path class="ln live" d="M125 134 V140 C125 150 190 146 190 158" marker-end="url(#aha)"/>
+                <path class="ln live" d="M60 206 C60 216 125 212 125 220 V230" marker-end="url(#aha)"/>
+                <path class="ln live" d="M190 206 C190 216 125 212 125 220 V230" marker-end="url(#aha)"/>
+                <path class="ln live" d="M125 272 V294" marker-end="url(#aha)"/>
+                <circle class="ping" cx="125" cy="80" r="3.5"/>
+                <circle class="ping" cx="125" cy="138" r="3.5"/>
+                <circle class="ping" cx="125" cy="216" r="3.5"/>
+                <circle class="ping" cx="125" cy="282" r="3.5"/>
+                </svg>
+              </div>
+              <p class="cap legend"><span class="pdot" aria-hidden="true"></span><span lang="en">Each dot is a notification to the next team.</span><span lang="pt">Cada ponto é uma notificação para a próxima equipe.</span></p>
+            <p class="cap" lang="en">New customer approval, before and after the platform</p>
+            <p class="cap" lang="pt">Aprovação de cliente novo, antes e depois da plataforma</p>
           </div>
         </div>
       </article>

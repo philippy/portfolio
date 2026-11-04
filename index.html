@@ -260,7 +260,8 @@ section{padding-block:88px}
 .legal{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:rgba(255,255,255,.45)}
 
 /* Leadership */
-.lead-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.lead-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px}
+.lead-grid > .lead:first-child{grid-row:span 2}
 .lead{display:flex;flex-direction:column;gap:14px;padding:28px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
 .lead .n{font-size:clamp(2.2rem,4vw,3rem);letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
 .lead .n i{font-style:normal;color:var(--muted);padding-inline:.08em}
@@ -269,6 +270,9 @@ section{padding-block:88px}
 .lead h3{font-size:20px;letter-spacing:-.025em;line-height:1.2;padding-top:14px;border-top:1px solid var(--line)}
 .lead p{font-size:14px;line-height:1.55;color:var(--muted)}
 .lead ul{display:flex;flex-direction:column;gap:6px;padding-left:18px;font-size:13.5px;line-height:1.5;color:var(--muted)}
+.lead .role{display:flex;flex-direction:column;gap:8px;padding-left:14px;border-left:2px solid var(--line)}
+.lead .rt{font:500 12px/1.4 var(--mono);color:var(--ink);letter-spacing:.02em}
+.lead p.k{font-size:12px}
 .lead .lk{margin-top:auto;font-size:13px;font-weight:500;color:var(--ink);text-underline-offset:3px;width:max-content}
 
 /* Load-in: transform only, text stays readable at every frame */
@@ -446,30 +450,56 @@ section{padding-block:88px}
           <span class="tag"><span lang="en">Leadership</span><span lang="pt">Liderança</span></span>
           <h2><span lang="en">Products taken from zero, with the teams around them</span><span lang="pt">Produtos que saíram do zero, junto com os times em volta deles</span></h2>
         </div>
-        <p class="small" lang="en">Beyond the screens: setting direction with squads and stakeholders, organizing how design works, and getting new products to their first customers.</p>
-        <p class="small" lang="pt">Além das telas: definir direção com squads e stakeholders, organizar como o design trabalha e levar produtos novos aos primeiros clientes.</p>
+        <p class="small" lang="en">Beyond the screens: managing and hiring designers, setting direction with squads, executives and clients, and getting new products to their first customers.</p>
+        <p class="small" lang="pt">Além das telas: gerir e contratar designers, definir direção com squads, diretoria e clientes, e levar produtos novos aos primeiros clientes.</p>
       </div>
       <div class="lead-grid">
         <article class="lead">
           <span class="n">0<i>→</i>18k</span>
-          <span class="k" lang="en">courses sold in the first 12 months</span>
-          <span class="k" lang="pt">cursos vendidos nos primeiros 12 meses</span>
-          <h3><span lang="en">Cogna · Education marketplace</span><span lang="pt">Cogna · Marketplace de educação</span></h3>
-          <p lang="en">Lead UX Designer for innovation initiatives. The marketplace became Voomp Creators.</p>
-          <p lang="pt">Lead UX Designer de iniciativas de inovação. O marketplace se tornou a Voomp Creators.</p>
+          <span class="k" lang="en">courses sold in the marketplace's first 12 months</span>
+          <span class="k" lang="pt">cursos vendidos nos primeiros 12 meses do marketplace</span>
+          <h3><span lang="en">Cogna · From lead to manager</span><span lang="pt">Cogna · De lead a gerente</span></h3>
+          <p class="k" lang="en">Brazil's leading education company, 3 million students</p>
+          <p class="k" lang="pt">Líder em educação no Brasil, 3 milhões de alunos</p>
+          <div class="role">
+            <span class="rt" lang="en">Product Design Lead · Jan–Oct 2022</span>
+            <span class="rt" lang="pt">Product Design Lead · jan–out 2022</span>
+            <p lang="en">Led a team of five designers launching an education marketplace, today Voomp Creators. Coordinated roadmaps with the squads and ran Lean UX, Design Thinking and Lean Inception with stakeholders.</p>
+            <p lang="pt">Liderei um time de cinco designers no lançamento de um marketplace de educação, hoje a Voomp Creators. Coordenei roadmaps com os squads e conduzi Lean UX, Design Thinking e Lean Inception com os stakeholders.</p>
+          </div>
+          <div class="role">
+            <span class="rt" lang="en">Product Design Manager · Oct 2022–Oct 2023</span>
+            <span class="rt" lang="pt">Product Design Manager · out 2022–out 2023</span>
+            <ul lang="en">
+              <li>Managed two design teams, in the Postgraduate and Experience business units, up to eight designers</li>
+              <li>Ran performance reviews, development plans, promotions and hiring</li>
+              <li>Owned the Product Design hiring process for the whole company</li>
+              <li>Set quarterly goals with PMs, group PMs and directors; part of Cogna's first AI team</li>
+            </ul>
+            <ul lang="pt">
+              <li>Gerenciei dois times de design, nas unidades de Pós-Graduação e de Experiência, com até oito designers</li>
+              <li>Conduzi avaliações de desempenho, PDIs, promoções e contratações</li>
+              <li>Fui responsável pelo processo de contratação de Product Design de toda a empresa</li>
+              <li>Definia os objetivos do trimestre com PMs, GPMs e diretores; fiz parte do primeiro time de IA da Cogna</li>
+            </ul>
+          </div>
+          <a class="lk" href="https://www.voompcreators.com.br/" target="_blank" rel="noopener"><span lang="en">Visit Voomp Creators ↗</span><span lang="pt">Conhecer a Voomp Creators ↗</span></a>
+        </article>
+        <article class="lead">
+          <span class="n txt">LATAM</span>
+          <span class="k" lang="en">design team lead</span>
+          <span class="k" lang="pt">liderança do time de design</span>
+          <h3><span lang="en">Marlabs · Design practice</span><span lang="pt">Marlabs · Prática de design</span></h3>
+          <p lang="en">Global digital consultancy. I led the Latin America design team and helped shape how design worked across the company.</p>
+          <p lang="pt">Consultoria digital global. Liderei o time de design da América Latina e ajudei a definir como o design funcionava na empresa toda.</p>
           <ul lang="en">
-            <li>Coordinated roadmaps with the squads, from concept to production</li>
-            <li>Organized the design team's workflow and estimates</li>
-            <li>Ran Lean UX, Design Thinking and Lean Inception sessions to co-create with stakeholders</li>
-            <li>Grew the design system's adoption across the company</li>
+            <li>Defined processes and frameworks for every product design team, working directly with the VP of Design</li>
+            <li>Joined first meetings with new clients to find opportunities and shape proposals</li>
           </ul>
           <ul lang="pt">
-            <li>Coordenei os roadmaps com os squads, da concepção à produção</li>
-            <li>Organizei o fluxo de trabalho e as estimativas do time de design</li>
-            <li>Conduzi sessões de Lean UX, Design Thinking e Lean Inception para cocriar com os stakeholders</li>
-            <li>Fortaleci o uso do design system em toda a empresa</li>
+            <li>Defini processos e frameworks para todos os times de Product Design, junto com a VP de Design</li>
+            <li>Participei das primeiras reuniões com novos clientes para identificar oportunidades e montar as propostas</li>
           </ul>
-          <a class="lk" href="https://www.voompcreators.com.br/" target="_blank" rel="noopener"><span lang="en">Visit Voomp Creators ↗</span><span lang="pt">Conhecer a Voomp Creators ↗</span></a>
         </article>
         <article class="lead">
           <span class="n">0<i>→</i>4</span>
@@ -478,16 +508,9 @@ section{padding-block:88px}
           <h3><span lang="en">EmbraerX · Beacon, from 0 to 1</span><span lang="pt">EmbraerX · Beacon, do 0 ao 1</span></h3>
           <p lang="en">I joined with no customers. When I left, four airlines ran their aircraft maintenance on it every day: three in the US and one in Austria.</p>
           <p lang="pt">Entrei sem nenhum cliente. Quando saí, quatro companhias aéreas faziam a manutenção dos aviões nele todos os dias: três nos EUA e uma na Áustria.</p>
+          <p lang="en">With Work &amp; Co, I planned and ran the design sprints for a team spread across the US, Brazil and Europe.</p>
+          <p lang="pt">Com a Work &amp; Co, planejei e conduzi os design sprints de um time espalhado entre EUA, Brasil e Europa.</p>
           <a class="lk" href="#beacon"><span lang="en">Read the case →</span><span lang="pt">Ver o case →</span></a>
-        </article>
-        <article class="lead">
-          <span class="n txt">US · BR · EU</span>
-          <span class="k" lang="en">one product team, three regions</span>
-          <span class="k" lang="pt">um time de produto, três regiões</span>
-          <h3><span lang="en">Design sprints across time zones</span><span lang="pt">Design sprints entre fusos horários</span></h3>
-          <p lang="en">I planned and ran the design sprints for a team spread across the US, Brazil and Europe: prototypes validated at the end of every sprint, and specs engineering could build from.</p>
-          <p lang="pt">Planejei e conduzi os design sprints de um time espalhado entre EUA, Brasil e Europa: protótipos validados ao fim de cada sprint e especificações prontas para a engenharia construir.</p>
-          <a class="lk" href="#beacon"><span lang="en">See the sprint prototype →</span><span lang="pt">Ver o protótipo do sprint →</span></a>
         </article>
       </div>
     </div>

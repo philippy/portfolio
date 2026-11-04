@@ -262,10 +262,10 @@ section{padding-block:88px}
 /* Leadership */
 .lead-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
 .lead-col{display:flex;flex-direction:column;gap:16px}
-.lead.wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:14px 40px;align-items:start}
-.lead.wide .lead-num,.lead.wide .lead-body{display:flex;flex-direction:column;gap:14px}
-.lead.wide .lead-body h3{padding-top:0;border-top:0}
-.lead{display:flex;flex-direction:column;gap:14px;padding:28px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
+.flags{position:absolute;top:28px;right:28px;display:flex;gap:5px;align-items:center}
+.flags svg{display:block;width:22px;height:15px;border-radius:2px;box-shadow:0 0 0 1px var(--line)}
+.flags svg.globe{width:18px;height:18px;box-shadow:none;color:var(--muted)}
+.lead{position:relative;display:flex;flex-direction:column;gap:14px;padding:28px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
 .lead .n{font-size:clamp(2.2rem,4vw,3rem);letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
 .lead .n i{font-style:normal;color:var(--muted);padding-inline:.08em}
 .lead .n.txt{font-size:clamp(1.6rem,2.8vw,2.1rem);letter-spacing:-.03em}
@@ -299,8 +299,6 @@ section{padding-block:88px}
   .visual{position:static}
   .approach{grid-template-columns:repeat(2,minmax(0,1fr))}
   .lead-grid{grid-template-columns:minmax(0,1fr)}
-  .lead.wide{grid-template-columns:minmax(0,1fr)}
-  .lead.wide .lead-body h3{padding-top:14px;border-top:1px solid var(--line)}
   .nav{display:none}
 }
 @media (max-width:620px){
@@ -461,6 +459,7 @@ section{padding-block:88px}
       <div class="lead-grid">
         <div class="lead-col">
         <article class="lead">
+          <span class="flags"><svg viewBox="0 0 30 20" role="img" aria-label="Brazil"><title>Brazil</title><rect width="30" height="20" fill="#009B3A"/><polygon points="15,2.2 27.6,10 15,17.8 2.4,10" fill="#FEDF00"/><circle cx="15" cy="10" r="4.3" fill="#002776"/></svg></span>
           <span class="n">0<i>→</i>18k</span>
           <span class="k" lang="en">courses sold in the marketplace's first 12 months</span>
           <span class="k" lang="pt">cursos vendidos nos primeiros 12 meses do marketplace</span>
@@ -494,6 +493,7 @@ section{padding-block:88px}
           <a class="lk" href="https://www.voompcreators.com.br/" target="_blank" rel="noopener"><span lang="en">Visit Voomp Creators ↗</span><span lang="pt">Conhecer a Voomp Creators ↗</span></a>
         </article>
         <article class="lead">
+          <span class="flags"><svg viewBox="0 0 30 20" role="img" aria-label="United States"><title>United States</title><rect width="30" height="20" fill="#fff"/><rect y="0.00" width="30" height="1.54" fill="#B22234"/><rect y="3.08" width="30" height="1.54" fill="#B22234"/><rect y="6.15" width="30" height="1.54" fill="#B22234"/><rect y="9.23" width="30" height="1.54" fill="#B22234"/><rect y="12.31" width="30" height="1.54" fill="#B22234"/><rect y="15.38" width="30" height="1.54" fill="#B22234"/><rect y="18.46" width="30" height="1.54" fill="#B22234"/><rect width="13" height="10.77" fill="#3C3B6E"/></svg><svg viewBox="0 0 30 20" role="img" aria-label="Austria"><title>Austria</title><rect width="30" height="20" fill="#fff"/><rect width="30" height="6.67" fill="#C8102E"/><rect y="13.33" width="30" height="6.67" fill="#C8102E"/></svg></span>
           <span class="n">0<i>→</i>4</span>
           <span class="k" lang="en">airlines using it every day</span>
           <span class="k" lang="pt">companhias aéreas usando no dia a dia</span>
@@ -507,6 +507,7 @@ section{padding-block:88px}
         </div>
         <div class="lead-col">
         <article class="lead">
+          <span class="flags"><svg class="globe" viewBox="0 0 24 24" role="img" aria-label="Global"><title>Global</title><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 7h14M5 17h14"/></g></svg></span>
           <span class="n">US$2M<i>/mo</i></span>
           <span class="k" lang="en">saved · data platform for Parts Repair negotiations</span>
           <span class="k" lang="pt">de economia por mês · plataforma de dados para as negociações de reparo de peças</span>
@@ -529,6 +530,7 @@ section{padding-block:88px}
           </ul>
         </article>
         <article class="lead">
+          <span class="flags"><svg viewBox="0 0 30 20" role="img" aria-label="Brazil"><title>Brazil</title><rect width="30" height="20" fill="#009B3A"/><polygon points="15,2.2 27.6,10 15,17.8 2.4,10" fill="#FEDF00"/><circle cx="15" cy="10" r="4.3" fill="#002776"/></svg><svg viewBox="0 0 30 20" role="img" aria-label="United States"><title>United States</title><rect width="30" height="20" fill="#fff"/><rect y="0.00" width="30" height="1.54" fill="#B22234"/><rect y="3.08" width="30" height="1.54" fill="#B22234"/><rect y="6.15" width="30" height="1.54" fill="#B22234"/><rect y="9.23" width="30" height="1.54" fill="#B22234"/><rect y="12.31" width="30" height="1.54" fill="#B22234"/><rect y="15.38" width="30" height="1.54" fill="#B22234"/><rect y="18.46" width="30" height="1.54" fill="#B22234"/><rect width="13" height="10.77" fill="#3C3B6E"/></svg></span>
           <span class="n">+18%</span>
           <span class="k" lang="en">engagement in the first month · streaming recommendations</span>
           <span class="k" lang="pt">de engajamento no primeiro mês · recomendações de streaming</span>
@@ -549,13 +551,11 @@ section{padding-block:88px}
           </ul>
         </article>
         </div>
-        <article class="lead wide">
-          <div class="lead-num">
+        <article class="lead">
+          <span class="flags"><svg viewBox="0 0 30 20" role="img" aria-label="Brazil"><title>Brazil</title><rect width="30" height="20" fill="#009B3A"/><polygon points="15,2.2 27.6,10 15,17.8 2.4,10" fill="#FEDF00"/><circle cx="15" cy="10" r="4.3" fill="#002776"/></svg><svg viewBox="0 0 30 20" role="img" aria-label="United States"><title>United States</title><rect width="30" height="20" fill="#fff"/><rect y="0.00" width="30" height="1.54" fill="#B22234"/><rect y="3.08" width="30" height="1.54" fill="#B22234"/><rect y="6.15" width="30" height="1.54" fill="#B22234"/><rect y="9.23" width="30" height="1.54" fill="#B22234"/><rect y="12.31" width="30" height="1.54" fill="#B22234"/><rect y="15.38" width="30" height="1.54" fill="#B22234"/><rect y="18.46" width="30" height="1.54" fill="#B22234"/><rect width="13" height="10.77" fill="#3C3B6E"/></svg><svg viewBox="0 0 30 20" role="img" aria-label="Spain"><title>Spain</title><rect width="30" height="20" fill="#AA151B"/><rect y="5" width="30" height="10" fill="#F1BF00"/></svg><svg viewBox="0 0 30 20" role="img" aria-label="Ireland"><title>Ireland</title><rect width="10" height="20" fill="#169B62"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#FF883E"/></svg><svg viewBox="0 0 30 20" role="img" aria-label="Norway"><title>Norway</title><rect width="30" height="20" fill="#BA0C2F"/><rect x="8.18" width="5.46" height="20" fill="#fff"/><rect y="7.5" width="30" height="5" fill="#fff"/><rect x="9.55" width="2.72" height="20" fill="#00205B"/><rect y="8.75" width="30" height="2.5" fill="#00205B"/></svg><svg viewBox="0 0 30 20" role="img" aria-label="Netherlands"><title>Netherlands</title><rect width="30" height="20" fill="#fff"/><rect width="30" height="6.67" fill="#AE1C28"/><rect y="13.33" width="30" height="6.67" fill="#21468B"/></svg></span>
             <span class="n">−34%</span>
             <span class="k" lang="en">licence costs · one onboarding for 6 countries</span>
             <span class="k" lang="pt">em custos de licença · um onboarding para 6 países</span>
-          </div>
-          <div class="lead-body">
             <h3><span lang="en">Equinix · Senior UX Designer, Global Platforms</span><span lang="pt">Equinix · Senior UX Designer, Global Platforms</span></h3>
             <p class="k" lang="en">Digital infrastructure · May 2020–Jan 2022</p>
             <p class="k" lang="pt">Infraestrutura digital · mai 2020–jan 2022</p>
@@ -571,15 +571,12 @@ section{padding-block:88px}
               <li>Desenhei com os times locais um onboarding global único. Ele foi implantado nos seis países e substituiu as ferramentas SaaS sobrepostas que cada um pagava, cortando 34% dos custos de licença</li>
               <li>Facilitei sessões de Design Thinking, Design Sprint e Lean UX entre negócio e engenharia</li>
             </ul>
-          </div>
         </article>
-        <article class="lead wide">
-          <div class="lead-num">
+        <article class="lead">
+          <span class="flags"><svg viewBox="0 0 30 20" role="img" aria-label="England"><title>England</title><rect width="30" height="20" fill="#fff"/><rect x="13" width="4" height="20" fill="#CE1124"/><rect y="8" width="30" height="4" fill="#CE1124"/></svg><svg viewBox="0 0 30 20" role="img" aria-label="Ireland"><title>Ireland</title><rect width="10" height="20" fill="#169B62"/><rect x="10" width="10" height="20" fill="#fff"/><rect x="20" width="10" height="20" fill="#FF883E"/></svg></span>
             <span class="n">+320%</span>
             <span class="k" lang="en">roof rack sales · visual filters by car type</span>
             <span class="k" lang="pt">nas vendas de bagageiros · filtros visuais por tipo de carro</span>
-          </div>
-          <div class="lead-body">
             <h3><span lang="en">MicksGarage · User Interface Specialist</span><span lang="pt">MicksGarage · User Interface Specialist</span></h3>
             <p class="k" lang="en">Auto parts e-commerce, Dublin · Apr 2011–Sep 2013</p>
             <p class="k" lang="pt">E-commerce de autopeças, Dublin · abr 2011–set 2013</p>
@@ -595,7 +592,6 @@ section{padding-block:88px}
               <li>Rodei testes A/B em navegação e landing pages para medir o efeito real de cada mudança</li>
               <li>Redesenhei a navegação de bagageiros com filtros visuais por tipo de carro (hatch, sedã, cupê, SUV e caminhonete), aumentando as vendas de bagageiros em 320%</li>
             </ul>
-          </div>
         </article>
       </div>
     </div>

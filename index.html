@@ -260,8 +260,8 @@ section{padding-block:88px}
 .legal{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:rgba(255,255,255,.45)}
 
 /* Leadership */
-.lead-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px}
-.lead-grid > .lead:first-child{grid-row:span 2}
+.lead-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+.lead-col{display:flex;flex-direction:column;gap:16px}
 .lead{display:flex;flex-direction:column;gap:14px;padding:28px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
 .lead .n{font-size:clamp(2.2rem,4vw,3rem);letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
 .lead .n i{font-style:normal;color:var(--muted);padding-inline:.08em}
@@ -454,6 +454,7 @@ section{padding-block:88px}
         <p class="small" lang="pt">Além das telas: gerir e contratar designers, definir direção com squads, diretoria e clientes, e levar produtos novos aos primeiros clientes.</p>
       </div>
       <div class="lead-grid">
+        <div class="lead-col">
         <article class="lead">
           <span class="n">0<i>→</i>18k</span>
           <span class="k" lang="en">courses sold in the marketplace's first 12 months</span>
@@ -488,6 +489,41 @@ section{padding-block:88px}
           <a class="lk" href="https://www.voompcreators.com.br/" target="_blank" rel="noopener"><span lang="en">Visit Voomp Creators ↗</span><span lang="pt">Conhecer a Voomp Creators ↗</span></a>
         </article>
         <article class="lead">
+          <span class="n">0<i>→</i>4</span>
+          <span class="k" lang="en">airlines using it every day</span>
+          <span class="k" lang="pt">companhias aéreas usando no dia a dia</span>
+          <h3><span lang="en">EmbraerX · Beacon, from 0 to 1</span><span lang="pt">EmbraerX · Beacon, do 0 ao 1</span></h3>
+          <p lang="en">I joined with no customers. When I left, four airlines ran their aircraft maintenance on it every day: three in the US and one in Austria.</p>
+          <p lang="pt">Entrei sem nenhum cliente. Quando saí, quatro companhias aéreas faziam a manutenção dos aviões nele todos os dias: três nos EUA e uma na Áustria.</p>
+          <p lang="en">With Work &amp; Co, I planned and ran the design sprints for a team spread across the US, Brazil and Europe.</p>
+          <p lang="pt">Com a Work &amp; Co, planejei e conduzi os design sprints de um time espalhado entre EUA, Brasil e Europa.</p>
+          <a class="lk" href="#beacon"><span lang="en">Read the case →</span><span lang="pt">Ver o case →</span></a>
+        </article>
+        </div>
+        <div class="lead-col">
+        <article class="lead">
+          <span class="n">US$2MM<i>/mo</i></span>
+          <span class="k" lang="en">saved · data platform for Parts Repair negotiations</span>
+          <span class="k" lang="pt">de economia por mês · plataforma de dados para as negociações de reparo de peças</span>
+          <h3><span lang="en">Embraer · Lead UX</span><span lang="pt">Embraer · Lead UX</span></h3>
+          <p class="k" lang="en">Global IT · Center of Excellence for Software Development</p>
+          <p class="k" lang="pt">TI Global · Centro de Excelência em Desenvolvimento de Software</p>
+          <p lang="en">I led the UX team serving internal and external clients across Embraer: Manufacturing, Innovation, Finance, Legal, Procurement, HR and the executive leadership team.</p>
+          <p lang="pt">Liderei o time de UX que atendia clientes internos e externos em toda a Embraer: Manufatura, Inovação, Finanças, Jurídico, Compras, RH e a diretoria executiva.</p>
+          <ul lang="en">
+            <li>Hired two designers and promoted one; coached the team and owned its improvement metrics</li>
+            <li>Managed a third-party UX agency, from scope and priorities to quality of delivery</li>
+            <li>Research, planning and navigable prototypes that simulated real-time dashboards and data-driven scenarios</li>
+            <li>For Parts Repair, a data platform to support negotiations, saving US$2 million a month</li>
+          </ul>
+          <ul lang="pt">
+            <li>Contratei dois designers e promovi um; fazia o coaching do time e cuidava das métricas de melhoria</li>
+            <li>Gerenciei uma agência de UX terceirizada, do escopo e das prioridades à qualidade da entrega</li>
+            <li>Pesquisa, planejamento e protótipos navegáveis que simulavam dashboards em tempo real e cenários baseados em dados</li>
+            <li>Para o setor de Reparo de Peças, uma plataforma de dados de apoio às negociações, com economia de US$ 2 milhões por mês</li>
+          </ul>
+        </article>
+        <article class="lead">
           <span class="n">+18%</span>
           <span class="k" lang="en">engagement in the first month · streaming recommendations</span>
           <span class="k" lang="pt">de engajamento no primeiro mês · recomendações de streaming</span>
@@ -507,17 +543,7 @@ section{padding-block:88px}
             <li>Liderei a estratégia de UX das recomendações de uma plataforma de streaming, usando dados de comportamento para adaptá-las ao horário e ao contexto</li>
           </ul>
         </article>
-        <article class="lead">
-          <span class="n">0<i>→</i>4</span>
-          <span class="k" lang="en">airlines using it every day</span>
-          <span class="k" lang="pt">companhias aéreas usando no dia a dia</span>
-          <h3><span lang="en">EmbraerX · Beacon, from 0 to 1</span><span lang="pt">EmbraerX · Beacon, do 0 ao 1</span></h3>
-          <p lang="en">I joined with no customers. When I left, four airlines ran their aircraft maintenance on it every day: three in the US and one in Austria.</p>
-          <p lang="pt">Entrei sem nenhum cliente. Quando saí, quatro companhias aéreas faziam a manutenção dos aviões nele todos os dias: três nos EUA e uma na Áustria.</p>
-          <p lang="en">With Work &amp; Co, I planned and ran the design sprints for a team spread across the US, Brazil and Europe.</p>
-          <p lang="pt">Com a Work &amp; Co, planejei e conduzi os design sprints de um time espalhado entre EUA, Brasil e Europa.</p>
-          <a class="lk" href="#beacon"><span lang="en">Read the case →</span><span lang="pt">Ver o case →</span></a>
-        </article>
+        </div>
       </div>
     </div>
   </section>

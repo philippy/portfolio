@@ -262,6 +262,9 @@ section{padding-block:88px}
 /* Leadership */
 .lead-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
 .lead-col{display:flex;flex-direction:column;gap:16px}
+.lead.wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:14px 40px;align-items:start}
+.lead.wide .lead-num,.lead.wide .lead-body{display:flex;flex-direction:column;gap:14px}
+.lead.wide .lead-body h3{padding-top:0;border-top:0}
 .lead{display:flex;flex-direction:column;gap:14px;padding:28px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
 .lead .n{font-size:clamp(2.2rem,4vw,3rem);letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
 .lead .n i{font-style:normal;color:var(--muted);padding-inline:.08em}
@@ -296,6 +299,8 @@ section{padding-block:88px}
   .visual{position:static}
   .approach{grid-template-columns:repeat(2,minmax(0,1fr))}
   .lead-grid{grid-template-columns:minmax(0,1fr)}
+  .lead.wide{grid-template-columns:minmax(0,1fr)}
+  .lead.wide .lead-body h3{padding-top:14px;border-top:1px solid var(--line)}
   .nav{display:none}
 }
 @media (max-width:620px){
@@ -544,6 +549,30 @@ section{padding-block:88px}
           </ul>
         </article>
         </div>
+        <article class="lead wide">
+          <div class="lead-num">
+            <span class="n">−34%</span>
+            <span class="k" lang="en">licence costs · one onboarding for 6 countries</span>
+            <span class="k" lang="pt">em custos de licença · um onboarding para 6 países</span>
+          </div>
+          <div class="lead-body">
+            <h3><span lang="en">Equinix · Senior UX Designer, Global Platforms</span><span lang="pt">Equinix · Senior UX Designer, Global Platforms</span></h3>
+            <p class="k" lang="en">Digital infrastructure · May 2020–Jan 2022</p>
+            <p class="k" lang="pt">Infraestrutura digital · mai 2020–jan 2022</p>
+            <p lang="en">Equinix's customer onboarding has to work for customers at the scale of a stock exchange or a global streaming platform, and each country ran it its own way.</p>
+            <p lang="pt">O onboarding de clientes da Equinix precisa funcionar para empresas do porte de uma bolsa de valores ou de uma plataforma global de streaming, e cada país fazia do seu jeito.</p>
+            <ul lang="en">
+              <li>Led a distributed research effort in Brazil, the US, Spain, Ireland, Sweden and Norway, with two to three people per country: I set what to investigate, they studied their local process, and I synthesized what was shared and where countries truly differed</li>
+              <li>Co-designed a single global onboarding with the local teams. It went live in all six countries and replaced the overlapping SaaS tools each one paid for, cutting licence costs by 34%</li>
+              <li>Facilitated Design Thinking, Design Sprint and Lean UX sessions across business and engineering</li>
+            </ul>
+            <ul lang="pt">
+              <li>Liderei uma pesquisa distribuída no Brasil, EUA, Espanha, Irlanda, Suécia e Noruega, com duas a três pessoas por país: defini o que investigar, elas estudaram o processo local e eu sintetizei o que era comum e onde os países realmente diferiam</li>
+              <li>Desenhei com os times locais um onboarding global único. Ele foi implantado nos seis países e substituiu as ferramentas SaaS sobrepostas que cada um pagava, cortando 34% dos custos de licença</li>
+              <li>Facilitei sessões de Design Thinking, Design Sprint e Lean UX entre negócio e engenharia</li>
+            </ul>
+          </div>
+        </article>
       </div>
     </div>
   </section>

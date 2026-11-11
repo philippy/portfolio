@@ -610,12 +610,17 @@ section{padding-block:88px}
       <div class="head">
         <div>
           <span class="tag"><span lang="en">Selected work</span><span lang="pt">Trabalhos</span></span>
-          <h2><span lang="en">Four problems, four very different operations</span><span lang="pt">Quatro problemas, quatro operações bem diferentes</span></h2>
+          <h2><span lang="en">Five problems, five very different operations</span><span lang="pt">Cinco problemas, cinco operações bem diferentes</span></h2>
         </div>
         <p class="small" lang="en">The common thread: research first, then a system people actually use.</p>
         <p class="small" lang="pt">O que liga todos: pesquisar primeiro, depois construir um sistema que as pessoas usem de fato.</p>
       </div>
       <div class="list">
+        <a class="item" href="#detetiza">
+          <div><h3>Detetiza OS</h3><p class="small" lang="en">Management system for a pest control company, from research to deploy with AI</p><p class="small" lang="pt">Sistema de gestão para uma empresa de dedetização, da pesquisa ao deploy com IA</p></div>
+          <span class="res">2 <span lang="en">weeks</span><span lang="pt">semanas</span><span class="src"><span lang="en">First version live</span><span lang="pt">Primeira versão no ar</span></span></span>
+          <span class="go" aria-hidden="true">→</span>
+        </a>
         <a class="item" href="#beacon">
           <div><h3>EmbraerX · Beacon</h3><p class="small" lang="en">Unscheduled aircraft maintenance platform, with Work &amp; Co</p><p class="small" lang="pt">Plataforma de manutenção não programada de aeronaves, com a Work &amp; Co</p></div>
           <span class="res">0 <i>→</i> 4 <span lang="en">airlines</span><span lang="pt">cias aéreas</span><span class="src"><span lang="en">In production</span><span lang="pt">Em produção</span></span></span>
@@ -644,9 +649,73 @@ section{padding-block:88px}
   <section style="padding-top:24px">
     <div class="wrap">
 
+      <article class="case" id="detetiza">
+        <div class="txt">
+          <span class="tag">01 · Detetiza OS</span>
+          <h3><span lang="en">From scattered spreadsheets to a live system in two weeks</span><span lang="pt">De planilhas soltas a um sistema no ar em duas semanas</span></h3>
+          <div class="meta"><span lang="en">Pest control · Brazil</span><span lang="pt">Dedetização · Brasil</span><span lang="en">Research to deploy</span><span lang="pt">Da pesquisa ao deploy</span><span lang="en">Built with AI</span><span lang="pt">Construído com IA</span></div>
+          <p lang="en">A pest control company ran on disorganized spreadsheets: customers, contracted services, bills to pay and bills to collect. Quotes were typed by hand in Word, and payment reminders were sent one by one.</p>
+          <p lang="pt">Uma empresa de dedetização funcionava com planilhas desorganizadas: clientes, serviços contratados, contas a pagar e a receber. Os orçamentos eram feitos à mão no Word e as cobranças, enviadas uma a uma.</p>
+          <h4><span lang="en">What I did</span><span lang="pt">O que eu fiz</span></h4>
+          <p lang="en">I interviewed five people: the owner, the admin manager, the finance manager and two field technicians. Then I mapped how the business runs: service channels, the schedule, the evidence recorded on each visit and the service certificate with its expiry date.</p>
+          <p lang="pt">Entrevistei cinco pessoas: o dono, a gerente administrativa, a gerente financeira e dois técnicos de campo. Depois mapeei como o negócio funciona: canais de atendimento, agenda de serviços, registro de evidências de cada visita e o certificado de serviço com validade.</p>
+          <p lang="en">I prototyped two experiences in Figma, desktop for the office and mobile for the field, and validated them with the people who would use them. After the adjustments, I planned the build for AI coding agents and used three AI models for the planning, the architecture and the code.</p>
+          <p lang="pt">Prototipei duas experiências no Figma, desktop para o escritório e mobile para o campo, e validei com quem ia usar. Depois dos ajustes, planejei o desenvolvimento para agentes de IA e usei três modelos de IA no planejamento, na arquitetura e no código.</p>
+          <p class="result" lang="en">The first version is live two weeks after the first interview, working part-time. It runs on Next.js 15, Drizzle with Neon, Better Auth and Tailwind.</p>
+          <p class="result" lang="pt">A primeira versão está no ar duas semanas depois da primeira entrevista, trabalhando em tempo parcial. Roda em Next.js 15, Drizzle com Neon, Better Auth e Tailwind.</p>
+          <h4><span lang="en">What comes next</span><span lang="pt">Próximos passos</span></h4>
+          <p lang="en">Already designed: automatic payment alerts, reminders and campaigns sent by WhatsApp, AI that reads documents, and managing records in plain language. The goal is an AI-first platform for service, sales, tasks and billing.</p>
+          <p lang="pt">Já desenhado: alertas automáticos de cobrança, lembretes e campanhas por WhatsApp, IA para leitura de documentos e gestão de cadastros em linguagem natural. A ideia é evoluir para uma plataforma AI-first de atendimento, vendas, tarefas e cobrança.</p>
+        </div>
+        <div class="visual">
+          <div class="vcard">
+            <svg class="flow arch" viewBox="0 0 300 396" role="img" aria-labelledby="dz-t">
+            <title id="dz-t">From interviews to a live system: five interviews, business flows mapped, a Figma prototype for desktop and mobile validated with users, a build plan for AI coding agents, and the first version live on the web.</title>
+            <defs><marker id="ahd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="head" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+            <text class="h" x="0" y="12" text-anchor="start"><tspan lang="en">FROM INTERVIEWS TO A LIVE SYSTEM</tspan><tspan lang="pt">DAS ENTREVISTAS AO SISTEMA NO AR</tspan></text>
+            <rect class="box" x="0.5" y="22" width="299" height="72" rx="12"/>
+            <text lang="en" x="14" y="44"><tspan class="t">5 interviews</tspan><tspan class="t sub"> · who does the work</tspan></text><text lang="pt" x="14" y="44"><tspan class="t">5 entrevistas</tspan><tspan class="t sub"> · quem faz o trabalho</tspan></text>
+            <rect class="chipr" x="14" y="58" width="64" height="22" rx="11"/>
+            <text class="ct" x="46" y="73" text-anchor="middle"><tspan lang="en">Owner</tspan><tspan lang="pt">Dono</tspan></text>
+            <rect class="chipr" x="84" y="58" width="64" height="22" rx="11"/>
+            <text class="ct" x="116" y="73" text-anchor="middle"><tspan lang="en">Admin</tspan><tspan lang="pt">Adm.</tspan></text>
+            <rect class="chipr" x="154" y="58" width="64" height="22" rx="11"/>
+            <text class="ct" x="186" y="73" text-anchor="middle"><tspan lang="en">Finance</tspan><tspan lang="pt">Financeiro</tspan></text>
+            <rect class="chipr" x="224" y="58" width="64" height="22" rx="11"/>
+            <text class="ct" x="256" y="73" text-anchor="middle"><tspan lang="en">Field ×2</tspan><tspan lang="pt">Campo ×2</tspan></text>
+            <rect class="box" x="0.5" y="120" width="299" height="52" rx="12"/>
+            <text x="14" y="142"><tspan class="t" lang="en">Business flows mapped</tspan><tspan class="t" lang="pt">Fluxos do negócio mapeados</tspan></text>
+            <text x="14" y="158"><tspan class="t sub" lang="en">schedule, evidence, certificate, billing</tspan><tspan class="t sub" lang="pt">agenda, evidências, certificado, cobrança</tspan></text>
+            <rect class="box" x="0.5" y="198" width="299" height="52" rx="12"/>
+            <text x="14" y="220"><tspan class="t" lang="en">Figma prototype</tspan><tspan class="t" lang="pt">Protótipo no Figma</tspan><tspan class="t sub" lang="en"> · validated with users</tspan><tspan class="t sub" lang="pt"> · validado com usuários</tspan></text>
+            <text x="14" y="236"><tspan class="t sub" lang="en">desktop for the office, mobile for the field</tspan><tspan class="t sub" lang="pt">desktop no escritório, mobile no campo</tspan></text>
+            <rect class="box hot" x="0" y="276" width="300" height="52" rx="12"/>
+            <text x="14" y="298"><tspan class="t inv" lang="en">Build plan for AI agents</tspan><tspan class="t inv" lang="pt">Plano de construção para agentes de IA</tspan></text>
+            <text x="14" y="314"><tspan class="t inv sub" lang="en">planning, architecture and code with 3 models</tspan><tspan class="t inv sub" lang="pt">planejamento, arquitetura e código com 3 modelos</tspan></text>
+            <rect class="box hot" x="0" y="346" width="300" height="46" rx="12"/>
+            <text lang="en" x="14" y="374"><tspan class="t inv">First version live</tspan><tspan class="t inv sub"> · two weeks in</tspan></text><text lang="pt" x="14" y="374"><tspan class="t inv">Primeira versão no ar</tspan><tspan class="t inv sub"> · em duas semanas</tspan></text>
+            <path class="ln live" d="M150 94 V118" marker-end="url(#ahd)"/>
+            <path class="ln live" d="M150 172 V196" marker-end="url(#ahd)"/>
+            <path class="ln live" d="M150 250 V274" marker-end="url(#ahd)"/>
+            <path class="ln back" d="M262 198 V174" marker-end="url(#ahd)"/>
+            <text class="h" x="256" y="190" text-anchor="end"><tspan lang="en">adjust</tspan><tspan lang="pt">ajusta</tspan></text>
+            <path class="ln live" d="M150 328 V344" marker-end="url(#ahd)"/>
+            </svg>
+            <p class="cap" lang="en">Two weeks from the first interview to the first version, part-time.</p>
+            <p class="cap" lang="pt">Duas semanas da primeira entrevista à primeira versão, em tempo parcial.</p>
+          </div>
+          <div class="vcard dark">
+            <div class="bignum">2<small lang="en">weeks</small><small lang="pt">semanas</small></div>
+            <p class="cap" lang="en">From 5 interviews to a system running on the web</p>
+            <p class="cap" lang="pt">De 5 entrevistas a um sistema rodando na web</p>
+            <span class="proof"><span lang="en">First version live</span><span lang="pt">Primeira versão no ar</span></span>
+          </div>
+        </div>
+      </article>
+
       <article class="case" id="beacon">
         <div class="txt">
-          <span class="tag">01 · EmbraerX</span>
+          <span class="tag">02 · EmbraerX</span>
           <h3><span lang="en">Getting grounded aircraft back in the air</span><span lang="pt">Fazendo avião parado voltar a voar</span></h3>
           <div class="meta"><span lang="en">With Work &amp; Co, New York</span><span lang="pt">Com a Work &amp; Co, Nova York</span><span lang="en">18+ months · Launched 2019</span><span lang="pt">18+ meses · Lançado em 2019</span><span>Web · iOS · Android</span></div>
           <p lang="en">When an aircraft has an unscheduled maintenance problem, every hour on the ground costs money. Beacon connects airline maintenance control, mechanics, the parts supply chain and service providers, so they can coordinate what's needed to return the aircraft to service safely. It works for any fleet, not only Embraer aircraft.</p>
@@ -682,7 +751,7 @@ section{padding-block:88px}
 
       <article class="case" id="tenetic">
         <div class="txt">
-          <span class="tag">02 · Tenetic</span>
+          <span class="tag">03 · Tenetic</span>
           <h3><span lang="en">A media sales pitch, built from data and AI almost instantly</span><span lang="pt">Uma proposta de mídia montada a partir de dados e IA, quase na hora</span></h3>
           <div class="meta"><span lang="en">New York · Venture-backed</span><span lang="pt">Nova York · Venture capital</span><span lang="en">Broadcast media</span><span lang="pt">Mídia broadcast</span><span lang="en">Product · UX strategy</span><span lang="pt">Produto · Estratégia UX</span></div>
           <p lang="en">People who sell TV airtime spend a lot of time building presentations. Each one has to justify why a company should buy a slot on channel X instead of Y, on a given day, at a given hour, for a given audience. Tenetic's founders already had the data to answer that. They needed a product that turned it into a pitch.</p>
@@ -752,7 +821,7 @@ section{padding-block:88px}
 
       <article class="case" id="e-portos">
         <div class="txt">
-          <span class="tag">03 · e-Portos</span>
+          <span class="tag">04 · e-Portos</span>
           <h3><span lang="en">13 minutes to find a process. Seconds in the proof of concept.</span><span lang="pt">13 minutos para achar um processo. Segundos na prova de conceito.</span></h3>
           <div class="meta"><span>Portos do Paraná</span><span lang="en">Public sector</span><span lang="pt">Setor público</span><span lang="en">Research · Architecture · Front-end</span><span lang="pt">Pesquisa · Arquitetura · Front-end</span></div>
           <p lang="en">Paranaguá is Brazil's second-largest port, and every department runs its daily work on administrative processes and protocols. e‑Portos is the new platform to manage them. The goal was simple to say and hard to do: make that daily work faster for everyone.</p>
@@ -809,7 +878,7 @@ section{padding-block:88px}
 
       <article class="case" id="polimix">
         <div class="txt">
-          <span class="tag">04 · Mizu / Polimix</span>
+          <span class="tag">05 · Mizu / Polimix</span>
           <h3><span lang="en">Approving a new customer took 8 days. Now it takes 2.</span><span lang="pt">Aprovar um cliente novo levava 8 dias. Agora leva 2.</span></h3>
           <div class="meta"><span lang="en">Cement and concrete</span><span lang="pt">Cimento e concreto</span><span lang="en">Sales across Brazil</span><span lang="pt">Vendas no Brasil todo</span><span lang="en">Research · Product · Front-end</span><span lang="pt">Pesquisa · Produto · Front-end</span></div>
           <p lang="en">Mizu / Polimix sells cement and concrete all over Brazil. Before a rep could sell to a new customer, four teams had to sign off, one after the other. That took 8 days, and the sale waited the whole time.</p>
